@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 70" width="440" height="70">
+  <!-- Execution as a Service tagline — italic serif in gold -->
+  <text
+    x="220"
+    y="48"
+    text-anchor="middle"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-size="34"
+    font-style="italic"
+    fill="#c8a84e">Execution as a Service</text>
+</svg>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <circle cx="100" cy="100" r="96" fill="#0a2d56" stroke="#c8a84e" stroke-width="6"/>
+  <ellipse cx="100" cy="100" rx="40" ry="92" fill="none" stroke="#c8a84e" stroke-width="2.5" opacity="0.6"/>
+  <ellipse cx="100" cy="100" rx="70" ry="92" fill="none" stroke="#c8a84e" stroke-width="2.5" opacity="0.4"/>
+  <line x1="8" y1="100" x2="192" y2="100" stroke="#c8a84e" stroke-width="2.5" opacity="0.5"/>
+  <line x1="100" y1="8" x2="100" y2="192" stroke="#c8a84e" stroke-width="2.5" opacity="0.5"/>
+  <ellipse cx="100" cy="70" rx="80" ry="24" fill="none" stroke="#c8a84e" stroke-width="1.5" opacity="0.3"/>
+  <ellipse cx="100" cy="130" rx="80" ry="24" fill="none" stroke="#c8a84e" stroke-width="1.5" opacity="0.3"/>
+  <text x="100" y="112" text-anchor="middle" font-family="Georgia, serif" font-size="32" font-weight="bold" fill="#c8a84e">MG</text>
+</svg>

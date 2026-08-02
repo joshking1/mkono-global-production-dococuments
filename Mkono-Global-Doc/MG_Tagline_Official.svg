@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 544.5 36" width="544.5" height="36">
+  <!--
+    Execution as a Service — Official Descriptor  ·  Version 2
+    ─────────────────────────────────────────────────────────────
+    Refinements applied:
+    · Letter-spacing increased to 3.5 (more breathing room)
+    · Stroke weight 0.5 (one step heavier without going bold)
+    · Italic slant reduced 4° (more restrained, executive feel)
+    · Gold #C8A84E — matches logo exactly
+
+    OFFICIAL MASTER — Always centered beneath MKONO GLOBAL.
+    Never recreated from scratch. Never retyped.
+  -->
+  <text
+    x="272.25"
+    y="26"
+    text-anchor="middle"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-size="20"
+    font-style="italic"
+    font-weight="normal"
+    letter-spacing="3.5"
+    fill="#c8a84e"
+    stroke="#c8a84e"
+    stroke-width="0.5"
+    style="paint-order: stroke fill;"
+    transform="translate(1.8, 0) skewX(-4)"
+  >Execution as a Service</text>
+</svg>

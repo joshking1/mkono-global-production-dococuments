@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<!-- saved from url=(0049)file:///Users/josephatwahome/Downloads/denis.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <title>Mkono Global Invoice #MKG-2026-0426</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+    * { margin:0; padding:0; box-sizing:border-box; }
+    @page { size:A4; margin:10mm 10mm; }
+    body { font-family:"Inter",sans-serif; background:#fff; color:#1a1a2e; padding:0; margin:0; }
+    .page { width:100%; background:#fff; border-left:5px solid #1a6bbf; position:relative; }
+
+    /* WATERMARK */
+    .watermark { position:fixed; top:50%; left:50%; transform:translate(-50%,-50%) rotate(42deg);
+      pointer-events:none; z-index:1; text-align:center; }
+    .watermark .wm1 { font-size:90pt; font-weight:900; color:#1b5e20; opacity:0.04; letter-spacing:8px; line-height:1; }
+    .watermark .wm2 { font-size:11pt; font-weight:600; color:#1b5e20; opacity:0.05; letter-spacing:4px; margin-top:6px; }
+
+    /* HEADER */
+    .header { background:linear-gradient(135deg,#0a2d56 0%,#0d3b6e 60%,#1a5299 100%); display:flex; flex-direction:column; flex-shrink:0; position:relative; }
+    .header-main { display:flex; justify-content:space-between; align-items:center; padding:20px 36px 16px; gap:20px; }
+    .brand { display:flex; align-items:center; gap:16px; flex-shrink:0; }
+    .brand-text h1 { font-size:26px; font-weight:800; color:#fff; letter-spacing:4px; white-space:nowrap; }
+    .brand-text .tm { font-size:9px; font-weight:700; color:#f9a825; letter-spacing:3px; text-transform:uppercase; margin-top:6px; white-space:nowrap; }
+    .brand-text .ts { font-size:9px; color:rgba(255,255,255,0.45); font-style:italic; margin-top:3px; white-space:nowrap; }
+    .hd { width:1px; height:54px; background:rgba(255,255,255,0.18); flex-shrink:0; }
+    .inv-meta { text-align:right; flex-shrink:0; padding-right:118px; }
+    .inv-meta .lbl { font-size:8.5px; text-transform:uppercase; letter-spacing:3px; color:rgba(255,255,255,0.45); white-space:nowrap; }
+    .inv-meta .num { font-size:22px; font-weight:800; color:#f9a825; margin-top:2px; white-space:nowrap; }
+    .inv-meta .dt { font-size:10px; color:#f9a825; font-weight:700; margin-top:3px; white-space:nowrap; }
+    .inv-meta .dt2 { font-size:10px; color:rgba(255,255,255,0.6); margin-top:2px; white-space:nowrap; }
+    .gold-strip { height:3px; background:linear-gradient(90deg,transparent 0%,#f9a825 30%,#f9a825 70%,transparent 100%); opacity:0.7; }
+
+    /* STAMP */
+    .stamp-wrap { position:absolute; top:16px; right:16px; width:110px; height:110px; pointer-events:none; z-index:10; }
+
+    /* STATUS BAR */
+    .status-bar { background:#1b5e20; padding:9px 36px; display:flex; justify-content:space-between; align-items:center; }
+    .status-badge { color:white; font-size:11px; font-weight:700; letter-spacing:0.5px; }
+    .status-detail { font-size:10px; color:rgba(255,255,255,0.85); }
+
+    .body { padding:0 36px 16px; position:relative; z-index:2; }
+
+    .parties { display:flex; gap:14px; margin:14px 0; page-break-inside:avoid; }
+    .party { flex:1; background:#f8f9ff; border:1px solid #dde3f0; border-radius:6px; padding:11px 14px; border-top:3px solid #1a6bbf; }
+    .party .role { font-size:8.5px; text-transform:uppercase; letter-spacing:2px; color:#1a6bbf; font-weight:700; margin-bottom:4px; }
+    .party h3 { font-size:13px; font-weight:700; color:#0d3b6e; margin-bottom:4px; }
+    .party p { font-size:10.5px; color:#555; line-height:1.6; }
+
+    .sec-hdr { background:#1a6bbf; color:white; font-size:9.5px; font-weight:700; text-transform:uppercase;
+      letter-spacing:2px; padding:7px 14px; border-radius:4px 4px 0 0; margin-top:14px; page-break-after:avoid; }
+    .exec-steps { border:1px solid #dde3f0; border-top:none; border-radius:0 0 6px 6px; overflow:hidden; page-break-inside:avoid; }
+    .step { display:flex; align-items:flex-start; gap:12px; padding:10px 14px;
+      border-bottom:1px dashed #dde3f0; font-size:11.5px; color:#333; }
+    .step:last-child { border-bottom:none; }
+    .step:nth-child(even) { background:#f8f9ff; }
+    .sn { background:#1a6bbf; color:white; font-size:10px; font-weight:800; min-width:22px; height:22px;
+      border-radius:50%; display:flex; align-items:center; justify-content:center; flex-shrink:0; margin-top:1px; }
+    .step strong { color:#0d3b6e; }
+
+    .bene-card { background:#eef4ff; border:1px solid #c5d8f5; border-radius:6px; padding:14px 18px; margin:14px 0; page-break-inside:avoid; }
+    .bene-title { font-size:8.5px; font-weight:700; text-transform:uppercase; letter-spacing:2px; color:#1a6bbf; margin-bottom:10px; }
+    .bene-grid { display:grid; grid-template-columns:1fr 1fr 1fr; gap:10px 16px; }
+    .bf .bk { font-size:8px; text-transform:uppercase; letter-spacing:1px; color:#999; font-weight:600; margin-bottom:2px; }
+    .bf .bv { font-size:12px; font-weight:700; color:#0d3b6e; }
+
+    .items-table { width:100%; border-collapse:collapse; font-size:11.5px; }
+    .items-table thead tr { background:#0d3b6e; color:white; }
+    .items-table thead th { padding:8px 10px; text-align:left; font-size:9px; letter-spacing:0.8px; text-transform:uppercase; }
+    .items-table thead th.right { text-align:right; }
+    .items-table tbody tr:nth-child(even) { background:#f8f9ff; }
+    .items-table tbody td { padding:8px 10px; border-bottom:1px solid #eef0f8; color:#333; }
+    .items-table tbody td.right { text-align:right; font-weight:600; color:#0d3b6e; }
+    .items-table tbody td strong { color:#0d3b6e; }
+
+    /* ON-THE-GROUND SUPPORT CARD */
+    .support-card { background:linear-gradient(135deg,#0a2d56,#1a5299); border-radius:6px; padding:14px 18px;
+      margin:8px 0; display:flex; justify-content:space-between; align-items:center; page-break-inside:avoid; }
+    .sc-left .sc-title { font-size:10px; text-transform:uppercase; letter-spacing:1.4px; color:#f9a825; font-weight:700; margin-bottom:5px; }
+    .sc-left .sc-desc { font-size:11px; color:rgba(255,255,255,0.85); line-height:1.6; }
+    .sc-left .sc-line { font-size:10.5px; color:#f9a825; font-style:italic; margin-top:3px; }
+    .sc-right { text-align:right; flex-shrink:0; }
+    .sc-right .sc-lbl { font-size:9px; text-transform:uppercase; letter-spacing:1px; color:rgba(255,255,255,0.55); margin-bottom:3px; }
+    .sc-right .sc-amount { font-size:22px; font-weight:900; color:#f9a825; }
+
+    /* TOTALS */
+    .totals-wrap { display:flex; justify-content:flex-end; margin-top:6px; page-break-inside:avoid; }
+    .totals-box { width:380px; border:1px solid #dde3f0; border-radius:6px; overflow:hidden; }
+    .t-row { display:flex; justify-content:space-between; padding:8px 14px; font-size:12.5px;
+      border-bottom:1px solid #eef0f8; color:#333; font-weight:600; }
+    .t-row.total { background:#0d3b6e; color:white; font-weight:800; font-size:15px; border:none; }
+    .t-row.total span:last-child { color:#f9a825; }
+    .t-usd { background:#f8f9ff; padding:8px 14px; display:flex; justify-content:space-between; }
+    .t-usd-l { font-size:11px; font-weight:700; color:#0d3b6e; div-note { font-size:8.5px; color:#888; font-style:italic; margin-top:2px; } }
+    .t-usd-r { font-size:12px; font-weight:700; color:#f9a825; }
+    .t-usd-note { font-size:8.5px; color:#888; font-style:italic; margin-top:2px; }
+    .t-paid { background:#1b5e20; color:white; padding:8px 14px; display:flex; justify-content:space-between; font-weight:700; font-size:12px; }
+
+    /* PROOF */
+    .proof-section { background:#f8f9ff; border:1px solid #dde3f0; border-radius:0 0 6px 6px; padding:12px 16px; page-break-inside:avoid; }
+    .proof-grid { display:grid; grid-template-columns:1fr 1fr; gap:6px; }
+    .proof-item { display:flex; align-items:center; gap:8px; font-size:11px; color:#333; }
+    .proof-dot { width:6px; height:6px; background:#1b5e20; border-radius:50%; flex-shrink:0; }
+
+    /* PAID CARD */
+    .paid-card { background:#f0fff4; border:1px solid #c8e6c9; border-radius:6px; margin:14px 0; overflow:hidden; page-break-inside:avoid; }
+    .paid-card-header { background:linear-gradient(135deg,#1b5e20,#2e7d32); padding:12px 16px; display:flex; align-items:center; gap:12px; }
+    .paid-icon { font-size:22px; }
+    .paid-title { font-size:14px; font-weight:800; color:white; }
+    .paid-sub { font-size:10px; color:rgba(255,255,255,0.8); margin-top:2px; }
+    .paid-body { padding:12px 16px; }
+    .paid-grid { display:grid; grid-template-columns:1fr 1fr 1fr; gap:8px 16px; }
+    .pg-field .pk { font-size:8px; text-transform:uppercase; letter-spacing:1px; color:#999; font-weight:600; margin-bottom:2px; }
+    .pg-field .pv { font-size:12px; font-weight:700; color:#0d3b6e; }
+    .paid-amount-pill { display:inline-block; background:#f9a825; color:#0d3b6e; font-size:13px;
+      font-weight:800; padding:4px 16px; border-radius:20px; margin-bottom:10px; }
+    .exec-auth { background:#1b5e20; color:white; padding:10px 14px; border-radius:6px; margin-top:10px;
+      display:flex; align-items:flex-start; gap:10px; font-size:11px; line-height:1.6; }
+
+    /* TC */
+    .tc-box { border:1px solid #eee; border-radius:0 0 6px 6px; padding:10px 16px; background:#fafafa; page-break-inside:avoid; }
+    .tc-box ol { padding-left:16px; font-size:10.5px; color:#555; line-height:1.7; }
+    .liability { margin-top:8px; background:#fff3e0; border-left:4px solid #e67e22; padding:8px 12px;
+      font-size:10.5px; color:#bf360c; font-style:italic; border-radius:0 6px 6px 0; line-height:1.6; }
+
+    .contact-bar { background:#f0f5ff; border-top:2px solid #1a6bbf; display:flex; justify-content:space-around; padding:10px 36px; }
+    .ci { text-align:center; flex:1; border-right:1px solid #dde3f0; padding:0 8px; }
+    .ci:last-child { border-right:none; }
+    .ct { font-size:8px; font-weight:700; color:#1a6bbf; letter-spacing:0.5px; margin-bottom:2px; }
+    .cv { font-size:12px; font-weight:800; color:#0d3b6e; white-space:nowrap; }
+    .cl { font-size:8.5px; color:#999; margin-top:1px; }
+
+    .footer { background:linear-gradient(135deg,#0a2d56 0%,#0d3b6e 60%,#1a5299 100%);
+      color:rgba(255,255,255,0.75); text-align:center; font-size:9px; padding:11px 36px; line-height:1.9; }
+    .footer strong { color:white; letter-spacing:1.5px; }
+    .footer em { color:rgba(255,255,255,0.6); font-style:italic; }
+    .footer-ref { color:#f9a825; font-size:8.5px; margin-top:2px; }
+
+    @media print { .page { border-left:none; } }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <!-- WATERMARK -->
+  <div class="watermark">
+    <div class="wm1">PAID</div>
+    <div class="wm2">MKONO GLOBAL · VERIFIED · 28/05/2026</div>
+  </div>
+
+  <!-- HEADER -->
+  <div class="header">
+
+    <!-- STAMP -->
+    <div class="stamp-wrap">
+      <svg width="110" height="110" viewBox="0 0 136 136" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="68" cy="68" r="64" fill="none" stroke="#f9a825" stroke-width="2.5" opacity="0.3"></circle>
+        <circle cx="68" cy="68" r="56" fill="rgba(249,168,37,0.08)" stroke="#f9a825" stroke-width="2"></circle>
+        <circle cx="68" cy="68" r="48" fill="none" stroke="#f9a825" stroke-width="1" opacity="0.5"></circle>
+        <defs>
+          <path id="cs-top" d="M 18,68 A 50,50 0 0,1 118,68"></path>
+          <path id="cs-bot" d="M 26,88 A 50,50 0 0,0 110,88"></path>
+        </defs>
+        <text font-family="Inter,sans-serif" font-size="9" font-weight="700" fill="#f9a825" letter-spacing="2">
+          <textpath href="#cs-top" startOffset="4%">MKONO GLOBAL  ·  VERIFIED</textpath>
+        </text>
+        <line x1="30" y1="62" x2="44" y2="62" stroke="#f9a825" stroke-width="1.5"></line>
+        <line x1="92" y1="62" x2="106" y2="62" stroke="#f9a825" stroke-width="1.5"></line>
+        <text x="68" y="62" text-anchor="middle" font-family="Inter,sans-serif" font-size="28" font-weight="900" fill="#f9a825" letter-spacing="2">PAID</text>
+        <text x="68" y="78" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" font-weight="700" fill="#f9a825" letter-spacing="1.5">CLEARED</text>
+        <text font-family="Inter,sans-serif" font-size="7.5" font-weight="600" fill="#f9a825" letter-spacing="1">
+          <textpath href="#cs-bot" startOffset="20%">28/05/2026</textpath>
+        </text>
+        <text x="48" y="94" font-family="Inter,sans-serif" font-size="10" fill="#f9a825">✦</text>
+        <text x="80" y="94" font-family="Inter,sans-serif" font-size="10" fill="#f9a825">✦</text>
+      </svg>
+    </div>
+
+    <div class="header-main">
+      <div class="brand">
+        <svg width="56" height="56" viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="28" cy="28" r="27" fill="#0A2D56"></circle>
+          <circle cx="28" cy="28" r="25.5" fill="none" stroke="#C8A84E" stroke-width="2.5"></circle>
+          <circle cx="28" cy="28" r="18" fill="none" stroke="#C8A84E" stroke-width="0.8" opacity="0.5"></circle>
+          <ellipse cx="28" cy="28" rx="18" ry="8" fill="none" stroke="#C8A84E" stroke-width="0.7" opacity="0.4"></ellipse>
+          <line x1="10" y1="28" x2="46" y2="28" stroke="#C8A84E" stroke-width="0.7" opacity="0.4"></line>
+          <ellipse cx="28" cy="28" rx="8" ry="18" fill="none" stroke="#C8A84E" stroke-width="0.7" opacity="0.4"></ellipse>
+          <text x="28" y="33" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="16" font-weight="900" fill="#C8A84E" letter-spacing="1">MG</text>
+        </svg>
+        <div class="brand-text">
+          <h1>MKONO GLOBAL</h1>
+          <div class="tm">Execution as a Service</div>
+          <div class="ts">Bridging the Diaspora to Home — With Precision, Integrity &amp; Speed</div>
+        </div>
+      </div>
+      <div class="hd"></div>
+      <div class="inv-meta">
+        <div class="lbl">Final Invoice — Paid</div>
+        <div class="num">#MKG-2026-0426</div>
+        <div class="dt">✅ PAID — 28/05/2026 EAT</div>
+        <div class="dt2">Issued: 28/05/2026 EAT</div>
+      </div>
+    </div>
+    <div class="gold-strip"></div>
+  </div>
+
+  <!-- POSTER SECTION -->
+  <div style="background:#0d3b6e;padding:22px 36px;">
+    <div style="font-size:18px;font-weight:900;color:#f9a825;letter-spacing:4px;text-transform:uppercase;margin-bottom:18px;line-height:1;">EXECUTION. VERIFIED.</div>
+    <div style="font-size:12px;color:rgba(255,255,255,0.85);line-height:1.75;margin-bottom:16px;">
+      You worked hard for this.<br>You sent the money because something important needed to get done.
+    </div>
+    <div style="border-left:3px solid #f9a825;padding-left:14px;margin-bottom:16px;">
+      <div style="font-size:13px;font-weight:700;color:#f9a825;margin-bottom:8px;">Distance creates uncertainty.</div>
+      <div style="font-size:12px;color:rgba(255,255,255,0.75);line-height:2;">
+        Did it get done?<br>Was it handled properly?<br>Can I trust what I am being told?
+      </div>
+    </div>
+    <div style="font-size:12px;color:rgba(255,255,255,0.85);margin-bottom:18px;line-height:1.75;">Mkono Global exists for exactly this reason.</div>
+    <div style="display:flex;gap:24px;margin-bottom:18px;">
+      <div style="font-size:10.5px;font-weight:700;color:#f9a825;text-transform:uppercase;letter-spacing:1px;border-top:2px solid rgba(249,168,37,0.5);padding-top:7px;">Your Eyes</div>
+      <div style="font-size:10.5px;font-weight:700;color:#f9a825;text-transform:uppercase;letter-spacing:1px;border-top:2px solid rgba(249,168,37,0.5);padding-top:7px;">Your Hands</div>
+      <div style="font-size:10.5px;font-weight:700;color:#f9a825;text-transform:uppercase;letter-spacing:1px;border-top:2px solid rgba(249,168,37,0.5);padding-top:7px;">Your Accountability Partner on the Ground</div>
+    </div>
+    <div style="display:flex;gap:20px;align-items:center;margin-bottom:18px;">
+      <div style="font-size:13px;font-weight:900;color:#fff;letter-spacing:1px;">We execute.</div>
+      <div style="width:4px;height:4px;border-radius:50%;background:#f9a825;flex-shrink:0;"></div>
+      <div style="font-size:13px;font-weight:900;color:#fff;letter-spacing:1px;">We verify.</div>
+      <div style="width:4px;height:4px;border-radius:50%;background:#f9a825;flex-shrink:0;"></div>
+      <div style="font-size:13px;font-weight:900;color:#fff;letter-spacing:1px;">We prove.</div>
+    </div>
+    <div style="border-top:1px solid rgba(249,168,37,0.25);padding-top:12px;font-size:13px;font-weight:800;color:#f9a825;font-style:italic;letter-spacing:1px;">Not a promise. Evidence.</div>
+  </div>
+
+  <!-- STATUS BAR -->
+  <div class="status-bar">
+    <div>
+      <div class="status-badge">✅ PAID — EXECUTION AUTHORISED</div>
+      <div style="font-size:9px;color:rgba(255,255,255,0.7);margin-top:3px;letter-spacing:0.5px;">
+        MISSION: Support Loved Ones &nbsp;·&nbsp; EXECUTION: Network Setup — 5G Router Setup
+      </div>
+    </div>
+    <div class="status-detail">Client: Josh Wahome (USA) &nbsp;·&nbsp; Beneficiary: Dennis Gitau &nbsp;·&nbsp; Delivery Method: Google PIN Delivery</div>
+  </div>
+
+  <div class="body">
+
+    <div class="parties">
+      <div class="party">
+        <div class="role">🇺🇸 Client (Diaspora — USA)</div>
+        <h3>Josh Wahome</h3>
+        <p>Location: United States of America<br>Service: Network Setup<br>Executed via: Mkono Global</p>
+      </div>
+      <div class="party">
+        <div class="role">🏢 Executing Agent</div>
+        <h3>Mkono Global Team</h3>
+        <p>Service: Execution as a Service<br>Delivery Method: Google PIN Delivery<br>WhatsApp: +1 484 985 0420</p>
+      </div>
+    </div>
+
+    <div class="sec-hdr">▶ Execution Order</div>
+    <div class="exec-steps">
+      <div class="step"><div class="sn">1</div><div><strong>Payment Received</strong> — KES 8,500 received from Josh Wahome (USA). Execution is authorised to proceed.</div></div>
+      <div class="step"><div class="sn">2</div><div><strong>Items to be Sourced</strong> — Safaricom 5G Router with inbuilt battery (Baicells EG3065M NR9) and 50 Mbps Home Data Package will be prepared.</div></div>
+      <div class="step"><div class="sn">3</div><div><strong>Order Staged for Delivery</strong> — Delivery arranged via Google PIN Delivery. Unique verification PIN registered.</div></div>
+      <div class="step"><div class="sn">4</div><div><strong>Proof to be Returned</strong> — Once Dennis Gitau confirms receipt and installation, execution proof will be sent to Josh Wahome (USA) via WhatsApp. No assumptions. No silence. Evidence only.</div></div>
+    </div>
+
+    <div class="bene-card">
+      <div class="bene-title">👤 Beneficiary Details</div>
+      <div class="bene-grid">
+        <div class="bf"><div class="bk">Beneficiary Name</div><div class="bv">Dennis Gitau</div></div>
+        <div class="bf"><div class="bk">Phone</div><div class="bv">+254 708 440 459</div></div>
+        <div class="bf"><div class="bk">Delivery Method</div><div class="bv">Google PIN Delivery</div></div>
+        <div class="bf"><div class="bk">Execution Date</div><div class="bv">28/05/2026 EAT</div></div>
+        <div class="bf"><div class="bk">Execution Method</div><div class="bv">PIN-Gated Handover</div></div>
+        <div class="bf"><div class="bk" style="color:#e65100;font-weight:800;">Order PIN</div><div class="bv" style="font-size:20px;color:#e65100;letter-spacing:4px;">048979</div></div>
+      </div>
+    </div>
+
+    <div class="sec-hdr">📋 Order Line Items</div>
+    <div style="border:1px solid #dde3f0;border-top:none;border-radius:0 0 6px 6px;overflow:hidden;margin-bottom:8px;page-break-inside:avoid;">
+      <table class="items-table">
+        <thead><tr><th>#</th><th>Item Description</th><th>Qty / Specification</th><th class="right">Amount (KES)</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td><strong>Safaricom 5G Router with inbuilt battery (Baicells EG3065M NR9)</strong></td><td>1 unit</td><td class="right">KES 3,000.00</td></tr>
+          <tr><td>2</td><td><strong>50 Mbps Home Data Package</strong></td><td>1 subscription</td><td class="right">KES 4,000.00</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="support-card">
+      <div class="sc-left">
+        <div class="sc-title">Mkono Global On-the-Ground Support</div>
+        <div class="sc-desc">Includes sourcing, coordination, verification, and confirmation updates.</div>
+        <div class="sc-line">We source it. We verify it. We make sure it is right — every time.</div>
+      </div>
+      <div class="sc-right">
+        <div class="sc-lbl">Service</div>
+        <div class="sc-amount">KES 1,500</div>
+      </div>
+    </div>
+
+    <div class="totals-wrap">
+      <div class="totals-box">
+        <div class="t-row"><span>Items Subtotal</span><span>KES 7,000.00</span></div>
+        <div class="t-row total"><span>TOTAL</span><span>KES 8,500.00</span></div>
+        <div class="t-usd">
+          <div class="t-usd-l">🇺🇸 USD Equivalent (Guidance)<div class="t-usd-note">Rate: 1 USD = KES 128.301 · KES amount is binding</div></div>
+          <div class="t-usd-r">USD 66.25</div>
+        </div>
+        <div class="t-paid"><span>✅ PAYMENT STATUS</span><span>PAID IN FULL</span></div>
+      </div>
+    </div>
+
+    <div class="sec-hdr" style="margin-top:14px;">📲 Proof &amp; Confirmation — What Josh Will Receive</div>
+    <div class="proof-section">
+      <div style="font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:#1b5e20;margin-bottom:8px;">✓ Mkono Global Accountability Commitment</div>
+      <div class="proof-grid">
+        <div class="proof-item"><div class="proof-dot"></div>Photos of 5G Router setup — to be sent upon execution</div>
+        <div class="proof-item"><div class="proof-dot"></div>Safaricom network activation receipt — to be sent upon execution</div>
+        <div class="proof-item"><div class="proof-dot"></div>WhatsApp confirmation from Dennis Gitau — to be sent upon receipt</div>
+        <div class="proof-item"><div class="proof-dot"></div>Status will be updated to Completed once execution is confirmed</div>
+      </div>
+    </div>
+
+    <div class="paid-card">
+      <div class="paid-card-header">
+        <div class="paid-icon">🎉</div>
+        <div>
+          <div class="paid-title">Payment Received &amp; Execution Authorised</div>
+          <div class="paid-sub">Full payment received from Josh Wahome (USA). Mkono Global is cleared to proceed.</div>
+        </div>
+      </div>
+      <div class="paid-body">
+        <div class="paid-amount-pill">KES 8,500.00 ✓</div>
+        <div class="paid-grid">
+          <div class="pg-field"><div class="pk">Payment Date</div><div class="pv">28/05/2026 EAT</div></div>
+          <div class="pg-field"><div class="pk">Execution Date</div><div class="pv">28/05/2026 EAT</div></div>
+          <div class="pg-field"><div class="pk">Status</div><div class="pv">🚀 Cleared — In Execution</div></div>
+          <div class="pg-field"><div class="pk">Delivery Method</div><div class="pv">Google PIN Delivery</div></div>
+          <div class="pg-field"><div class="pk">Order PIN</div><div class="pv" style="color:#e65100;letter-spacing:3px;font-size:16px;">048979</div></div>
+          <div class="pg-field"><div class="pk">Beneficiary</div><div class="pv">Dennis Gitau</div></div>
+        </div>
+        <div class="exec-auth">
+          <div style="font-size:18px;flex-shrink:0;">🚀</div>
+          <div>Mkono Global is cleared to proceed with Safaricom 5G router setup and data activation. Google PIN Delivery arranged. Dennis Gitau will receive the active setup via verified PIN handover.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sec-hdr" style="background:#0d3b6e;">📜 Terms &amp; Conditions</div>
+    <div class="tc-box">
+      <ol>
+        <li><strong>Payment Terms:</strong> Full payment received before execution. This invoice is paid in full.</li>
+        <li><strong>Execution Method:</strong> 5G Router and 50 Mbps Home Data Package are prepared. Beneficiary completes verification via Google PIN Delivery to receive setup.</li>
+        <li><strong>Order PIN:</strong> PIN 048979 is unique to this order. Beneficiary completes PIN validation to secure delivery.</li>
+        <li><strong>Currency:</strong> KES 8,500.00 is the binding invoice amount. USD 66.25 is guidance only, based on 1 USD = KES 128.301.</li>
+        <li><strong>Product Availability:</strong> If hardware or package is unavailable, client will be contacted for substitution approval or refund.</li>
+        <li><strong>Satisfaction Guarantee:</strong> If proof of execution is unsatisfactory, the service fee is fully refunded.</li>
+        <li><strong>Privacy:</strong> Your information is confidential and never shared with third parties.</li>
+        <li><strong>Communication:</strong> All official communication via WhatsApp +1 484 985 0420. Other channels are not monitored.</li>
+      </ol>
+      <div class="liability">⚠️ Mkono Global is not liable for delays caused by supplier unavailability, stock shortages, or any unforeseeable circumstances including traffic congestion, particularly within busy areas of Nairobi City.</div>
+    </div>
+
+  </div>
+
+  <div class="contact-bar">
+    <div class="ci"><div class="ct">🇰🇪 Kenya</div><div class="cv">+254 706 262 689</div><div class="cl">WhatsApp / Call</div></div>
+    <div class="ci"><div class="ct">🇺🇸 USA</div><div class="cv">+1 484 985 0420</div><div class="cl">WhatsApp — Primary</div></div>
+    <div class="ci"><div class="ct">📄 Ref</div><div class="cv">#MKG-2026-0426</div><div class="cl">Quote in all communications</div></div>
+  </div>
+
+  <div class="footer">
+    <strong>MKONO GLOBAL</strong> &nbsp;·&nbsp; Execution as a Service<br>
+    <em>Bridging the Diaspora to Home — With Precision, Integrity &amp; Speed</em>
+    <div class="footer-ref">Invoice #MKG-2026-0426 &nbsp;·&nbsp; 28/05/2026 EAT &nbsp;·&nbsp; Confidential &amp; Official Document</div>
+  </div>
+
+</div>
+
+</body></html>

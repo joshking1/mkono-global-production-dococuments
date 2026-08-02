@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 90" width="560" height="90">
+  <!-- Transparent background — works on both navy shirts and light surfaces -->
+  <!-- MKONO GLOBAL wordmark in gold, bold tracked sans-serif -->
+  <text
+    x="280"
+    y="62"
+    text-anchor="middle"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="46"
+    font-weight="900"
+    fill="#c8a84e"
+    letter-spacing="6">MKONO GLOBAL</text>
+</svg>

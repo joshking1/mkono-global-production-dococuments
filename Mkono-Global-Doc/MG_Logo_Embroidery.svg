@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+
+  <!-- Outer circle — unchanged -->
+  <circle cx="100" cy="100" r="96" fill="#0a2d56" stroke="#c8a84e" stroke-width="6"/>
+
+  <!-- Meridian ellipses — slightly thinned to recede behind MG -->
+  <ellipse cx="100" cy="100" rx="40" ry="92" fill="none" stroke="#c8a84e" stroke-width="2" opacity="0.5"/>
+  <ellipse cx="100" cy="100" rx="70" ry="92" fill="none" stroke="#c8a84e" stroke-width="2" opacity="0.3"/>
+
+  <!-- Equator — significantly faded; passes directly through MG letterforms -->
+  <line x1="8" y1="100" x2="192" y2="100" stroke="#c8a84e" stroke-width="1.5" opacity="0.2"/>
+
+  <!-- Vertical meridian — modest reduction -->
+  <line x1="100" y1="8" x2="100" y2="192" stroke="#c8a84e" stroke-width="2" opacity="0.4"/>
+
+  <!-- Latitude parallels — unchanged -->
+  <ellipse cx="100" cy="70" rx="80" ry="24" fill="none" stroke="#c8a84e" stroke-width="1.5" opacity="0.3"/>
+  <ellipse cx="100" cy="130" rx="80" ry="24" fill="none" stroke="#c8a84e" stroke-width="1.5" opacity="0.3"/>
+
+  <!-- MG — 18% larger (60 → 71), re-centered vertically -->
+  <text x="100" y="126" text-anchor="middle" font-family="Georgia, serif" font-size="71" font-weight="bold" fill="#c8a84e">MG</text>
+
+</svg>
