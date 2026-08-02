@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <title>Delivery Note #MKG-DN-2026-0427</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+    * { margin:0; padding:0; box-sizing:border-box; }
+    @page { size:A4; margin:0; }
+    body { font-family:"Inter",sans-serif; background:#fff; width:210mm; margin:0; padding:0; }
+    .page { width:210mm; height:297mm; overflow:hidden; display:flex; flex-direction:column; border-left:5px solid #1a6bbf; }
+
+    /* ── 1. HEADER ── */
+    .header { background:linear-gradient(135deg,#0a2d56 0%,#0d3b6e 60%,#1a5299 100%); flex-shrink:0; }
+    .header-main { display:flex; justify-content:space-between; align-items:center; padding:12px 22px 10px; gap:14px; }
+    .brand { display:flex; align-items:center; gap:10px; flex-shrink:0; }
+    .bt h1 { font-size:17px; font-weight:800; color:#fff; letter-spacing:3px; white-space:nowrap; }
+    .bt .tm { font-size:7px; font-weight:700; color:#f9a825; letter-spacing:2.5px; text-transform:uppercase; margin-top:3px; }
+    .bt .ts { font-size:7px; color:rgba(255,255,255,0.45); font-style:italic; margin-top:2px; white-space:nowrap; }
+    .hd { width:1px; height:40px; background:rgba(255,255,255,0.18); flex-shrink:0; }
+    .header-meta { text-align:right; flex-shrink:0; }
+    .hm-label { font-size:7px; text-transform:uppercase; letter-spacing:2px; color:rgba(255,255,255,0.45); }
+    .hm-ref { font-size:14px; font-weight:800; color:#f9a825; margin-top:2px; }
+    .hm-pills { display:flex; gap:6px; justify-content:flex-end; margin-top:6px; flex-wrap:wrap; }
+    .hm-pill { background:rgba(255,255,255,0.12); color:white; font-size:9px; font-weight:700; padding:3px 10px; border-radius:10px; white-space:nowrap; }
+    .hm-pill.gold { background:#f9a825; color:#0d3b6e; }
+    .gs { height:3px; background:linear-gradient(90deg,transparent,#f9a825 30%,#f9a825 70%,transparent); opacity:0.7; }
+
+    /* ── BODY ── */
+    .body { padding:10px 20px 8px; flex:1; display:flex; flex-direction:column; gap:8px; overflow:hidden; }
+
+    /* ── 2. GREETING ── */
+    .greet { background:linear-gradient(135deg,#fff8e1,#fffde7); border:2px solid #f9a825; border-radius:7px; padding:10px 16px; flex-shrink:0; }
+    .greet-name { font-size:22px; font-weight:900; color:#0d3b6e; margin-bottom:5px; }
+    .greet-line { font-size:11.5px; color:#333; line-height:1.75; }
+    .greet-line strong { color:#0d3b6e; font-weight:700; }
+
+    /* ── 3. INFO ROW ── */
+    .info-row { display:flex; gap:8px; flex-shrink:0; }
+    .info-card { flex:1; background:#f8f9ff; border:1px solid #dde3f0; border-top:3px solid #1a6bbf; border-radius:6px; padding:8px 12px; }
+    .ic-label { font-size:7px; font-weight:800; text-transform:uppercase; letter-spacing:2px; color:#1a6bbf; margin-bottom:6px; }
+    .ic-name { font-size:15px; font-weight:900; color:#0d3b6e; margin-bottom:4px; }
+    .ic-row { display:flex; align-items:center; gap:6px; font-size:10px; color:#444; margin-top:3px; }
+    .ic-row strong { color:#0d3b6e; font-weight:700; }
+    .ic-deadline-label { font-size:7.5px; font-weight:800; text-transform:uppercase; letter-spacing:1px; color:#e65100; margin-top:8px; margin-bottom:2px; }
+    .ic-deadline { font-size:14px; font-weight:900; color:#e65100; line-height:1.2; }
+
+    /* ── 4. ACTION REQUIRED ── */
+    .action-section { background:#0d3b6e; border-radius:8px; padding:10px 16px; flex-shrink:0; }
+    .action-title { font-size:9px; font-weight:800; text-transform:uppercase; letter-spacing:2.5px; color:#f9a825; margin-bottom:8px; text-align:center; border-bottom:1px solid rgba(249,168,37,0.3); padding-bottom:6px; }
+    .action-grid { display:flex; gap:0; }
+    .action-item { flex:1; display:flex; flex-direction:column; align-items:center; text-align:center; padding:6px 10px; border-right:1px solid rgba(255,255,255,0.15); }
+    .action-item:last-child { border-right:none; }
+    .action-num { background:#f9a825; color:#0d3b6e; font-size:9px; font-weight:900; width:20px; height:20px; border-radius:50%; display:flex; align-items:center; justify-content:center; margin:0 auto 6px; }
+    .action-icon { font-size:24px; margin-bottom:4px; }
+    .action-cmd { font-size:12px; font-weight:900; color:#f9a825; text-transform:uppercase; letter-spacing:0.5px; line-height:1.2; margin-bottom:5px; }
+    .action-val { font-size:13px; font-weight:800; color:white; line-height:1.3; margin-bottom:2px; }
+    .action-hint { font-size:9px; color:rgba(255,255,255,0.55); line-height:1.4; }
+
+    /* ── 5. ITEMS TABLE ── */
+    .items-hdr { background:#0d3b6e; color:white; font-size:8px; font-weight:700; text-transform:uppercase; letter-spacing:1.5px; padding:5px 12px; border-radius:4px 4px 0 0; flex-shrink:0; }
+    .it { width:100%; border-collapse:collapse; }
+    .it thead tr { background:#1a1a2e; color:white; }
+    .it thead th { padding:5px 10px; text-align:left; font-size:8px; text-transform:uppercase; letter-spacing:0.8px; }
+    .it thead th.qty-col { width:120px; text-align:center; }
+    .it tbody tr:nth-child(even) { background:#f8f9ff; }
+    .it tbody td { padding:4px 10px; border-bottom:1px solid #eef0f8; font-size:10.5px; color:#555; }
+    .it tbody td.item-num { color:#aaa; font-size:10px; width:24px; }
+    .it tbody td.item-qty { font-size:13px; font-weight:900; color:#0d3b6e; text-align:center; }
+
+    /* ── 6. CONFIRMATION ── */
+    .confirm-wrap { display:flex; gap:6px; flex-shrink:0; }
+    .confirm-yes { flex:1; background:#f0fff4; border:2px solid #2e7d32; border-radius:7px; padding:8px 12px; }
+    .confirm-no  { flex:1; background:#fff8f0; border:2px solid #e65100; border-radius:7px; padding:8px 12px; }
+    .cf-icon { font-size:20px; margin-bottom:4px; }
+    .cf-label { font-size:8px; font-weight:800; text-transform:uppercase; letter-spacing:2px; margin-bottom:4px; }
+    .cf-label.green { color:#2e7d32; }
+    .cf-label.orange { color:#e65100; }
+    .cf-outcome { font-size:10px; color:#555; margin-bottom:4px; line-height:1.5; }
+    .cf-msg { font-size:13px; font-weight:900; color:#1b5e20; }
+    .cf-phone { font-size:13px; font-weight:900; color:#e65100; margin-top:3px; }
+
+    /* ── 7. FOOTER ── */
+    .footer { background:linear-gradient(135deg,#0a2d56 0%,#0d3b6e 60%,#1a5299 100%); flex-shrink:0; display:flex; justify-content:space-around; align-items:center; padding:9px 22px; }
+    .ft-item { text-align:center; flex:1; border-right:1px solid rgba(255,255,255,0.12); padding:0 8px; }
+    .ft-item:last-child { border-right:none; }
+    .ft-label { font-size:7px; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:rgba(255,255,255,0.5); margin-bottom:2px; }
+    .ft-value { font-size:11px; font-weight:800; color:white; }
+    .ft-sub { font-size:7.5px; color:rgba(255,255,255,0.5); margin-top:1px; }
+    .ft-ref { font-size:7px; color:#f9a825; margin-top:2px; }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <!-- ── 1. HEADER ── -->
+  <div class="header">
+    <div class="header-main">
+      <div class="brand">
+        <svg width="44" height="44" viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="28" cy="28" r="27" fill="#0A2D56"/>
+          <circle cx="28" cy="28" r="25.5" fill="none" stroke="#C8A84E" stroke-width="2.5"/>
+          <circle cx="28" cy="28" r="18" fill="none" stroke="#C8A84E" stroke-width="0.8" opacity="0.5"/>
+          <ellipse cx="28" cy="28" rx="18" ry="8" fill="none" stroke="#C8A84E" stroke-width="0.7" opacity="0.4"/>
+          <line x1="10" y1="28" x2="46" y2="28" stroke="#C8A84E" stroke-width="0.7" opacity="0.4"/>
+          <ellipse cx="28" cy="28" rx="8" ry="18" fill="none" stroke="#C8A84E" stroke-width="0.7" opacity="0.4"/>
+          <text x="28" y="33" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="16" font-weight="900" fill="#C8A84E" letter-spacing="1">MG</text>
+        </svg>
+        <div class="bt">
+          <h1>MKONO GLOBAL</h1>
+          <div class="tm">Execution as a Service</div>
+          <div class="ts">Bridging the Diaspora to Home — With Precision, Integrity &amp; Speed</div>
+        </div>
+      </div>
+      <div class="hd"></div>
+      <div class="header-meta">
+        <div class="hm-label">Delivery Note</div>
+        <div class="hm-ref">#MKG-DN-2026-0427</div>
+        <div class="hm-pills">
+          <span class="hm-pill">📍 Lang'ata, Nairobi</span>
+          <span class="hm-pill">📦 13 Items</span>
+          <span class="hm-pill gold">📅 Sunday 06 July 2026 · 4:00 PM EAT</span>
+        </div>
+      </div>
+    </div>
+    <div class="gs"></div>
+  </div>
+
+  <div class="body">
+
+    <!-- ── 2. GREETING ── -->
+    <div class="greet">
+      <div class="greet-name">🛍️ Habari Macrine!</div>
+      <div class="greet-line">
+        <strong>LAJ (USA)</strong> has arranged a special delivery for you through <strong>Mkono Global</strong>.<br/>
+        Your order is currently being prepared for delivery.
+      </div>
+    </div>
+
+    <!-- ── 3. RECIPIENT & DELIVERY INFO ── -->
+    <div class="info-row">
+      <div class="info-card">
+        <div class="ic-label">👤 Beneficiary</div>
+        <div class="ic-name">MAC JUM</div>
+        <div class="ic-row">☎ <strong>+254 XXX XXX XXX</strong></div>
+        <div class="ic-row">📍 Lang'ata, Nairobi</div>
+        <div class="ic-row">🎁 Gift from LAJ (USA)</div>
+      </div>
+      <div class="info-card">
+        <div class="ic-label">📦 Delivery Details</div>
+        <div class="ic-name">Mkono Global</div>
+        <div class="ic-row">📍 Lang'ata, Nairobi, Kenya</div>
+        <div class="ic-deadline-label">📅 Deliver By</div>
+        <div class="ic-deadline">Sunday, 06 July 2026<br/>4:00 PM EAT</div>
+      </div>
+    </div>
+
+    <!-- ── 4. ACTION REQUIRED ── -->
+    <div class="action-section">
+      <div class="action-title">⚡ BEFORE DELIVERY</div>
+      <div class="action-grid">
+        <div class="action-item">
+          <div class="action-num">①</div>
+          <div class="action-icon">📞</div>
+          <div class="action-cmd">Expect Our Call</div>
+          <div class="action-val">+1 555 854 0662</div>
+          <div class="action-hint">Mkono Global</div>
+        </div>
+        <div class="action-item">
+          <div class="action-num">②</div>
+          <div class="action-icon">📍</div>
+          <div class="action-cmd">Send Your PIN</div>
+          <div class="action-val">Google Maps PIN</div>
+          <div class="action-hint">When we contact you</div>
+        </div>
+        <div class="action-item">
+          <div class="action-num">③</div>
+          <div class="action-icon">📦</div>
+          <div class="action-cmd">Count Your Items</div>
+          <div class="action-val">13 Items</div>
+          <div class="action-hint">Before rider leaves</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── 5. ITEMS TABLE ── -->
+    <div style="flex-shrink:0;">
+      <div class="items-hdr">🧾 Your 13 Items — Check Each One Upon Delivery</div>
+      <table class="it">
+        <thead>
+          <tr><th>#</th><th>Item</th><th class="qty-col">Quantity</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="item-num">1</td><td>Tena Tissue</td><td class="item-qty">10 packs</td></tr>
+          <tr><td class="item-num">2</td><td>Vaseline Jelly Original 240ml</td><td class="item-qty">1 item</td></tr>
+          <tr><td class="item-num">3</td><td>Dove Soap 3-in-1 135g</td><td class="item-qty">2 packs</td></tr>
+          <tr><td class="item-num">4</td><td>Dove Body Wash 750ml</td><td class="item-qty">1 item</td></tr>
+          <tr><td class="item-num">5</td><td>Persil Machine Wash Gel 3L — Lavender</td><td class="item-qty">1 item</td></tr>
+          <tr><td class="item-num">6</td><td>Safisha Toilet Cleaner Lavender 1L</td><td class="item-qty">2 bottles</td></tr>
+          <tr><td class="item-num">7</td><td>Glade Air Freshener 300ml — Lavender</td><td class="item-qty">1 item</td></tr>
+          <tr><td class="item-num">8</td><td>Glade Air Freshener 300ml — Ocean Escape</td><td class="item-qty">1 item</td></tr>
+          <tr><td class="item-num">9</td><td>Nivea Skin Firming Lotion Q10 400ml</td><td class="item-qty">2 items</td></tr>
+          <tr><td class="item-num">10</td><td>Vim Powder Lavender 1kg</td><td class="item-qty">1 item</td></tr>
+          <tr><td class="item-num">11</td><td>Dormans Instant Coffee 200g</td><td class="item-qty">1 item</td></tr>
+          <tr><td class="item-num">12</td><td>Milk</td><td class="item-qty">1 dozen</td></tr>
+          <tr><td class="item-num">13</td><td>Manji Classic Combo Biscuits 1kg</td><td class="item-qty">1 item</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- ── 6. AFTER DELIVERY CONFIRMATION ── -->
+    <div class="confirm-wrap">
+      <div class="confirm-yes">
+        <div class="cf-icon">✅</div>
+        <div class="cf-label green">Everything is Correct</div>
+        <div class="cf-outcome">WhatsApp +1 555 854 0662</div>
+        <div class="cf-msg">"Received everything — all good."</div>
+      </div>
+      <div class="confirm-no">
+        <div class="cf-icon">⚠️</div>
+        <div class="cf-label orange">Something is Missing</div>
+        <div class="cf-outcome">Tell the rider immediately.<br/>Do not let the rider leave.</div>
+        <div class="cf-phone">Call +1 555 854 0662</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ── 7. FOOTER ── -->
+  <div class="footer">
+    <div class="ft-item">
+      <div class="ft-label">🇰🇪 Kenya Office</div>
+      <div class="ft-value">+1 555 854 0662</div>
+      <div class="ft-sub">WhatsApp / Call</div>
+    </div>
+    <div class="ft-item">
+      <div class="ft-label">🇺🇸 USA Office</div>
+      <div class="ft-value">+1 555 854 0662</div>
+      <div class="ft-sub">WhatsApp</div>
+    </div>
+    <div class="ft-item">
+      <div class="ft-label">🌐 Website</div>
+      <div class="ft-value">mkonoglobal.com</div>
+      <div class="ft-sub">Execution as a Service</div>
+    </div>
+    <div class="ft-item">
+      <div class="ft-label">📄 Reference</div>
+      <div class="ft-value" style="font-size:9px;">#MKG-DN-2026-0427</div>
+      <div class="ft-ref">03/07/2026 EAT · Confidential</div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

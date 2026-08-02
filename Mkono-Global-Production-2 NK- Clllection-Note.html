@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <title>Collection Note #MKG-DN-2026-0429</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+    *{margin:0;padding:0;box-sizing:border-box;}
+    @page{size:A4;margin:0;}
+    body{font-family:"Inter",sans-serif;background:#fff;width:210mm;margin:0;padding:0;}
+    .page{width:210mm;height:297mm;overflow:hidden;display:flex;flex-direction:column;border-left:5px solid #1a6bbf;}
+
+    .header{background:linear-gradient(135deg,#0a2d56 0%,#0d3b6e 60%,#1a5299 100%);display:flex;flex-direction:column;flex-shrink:0;}
+    .hm{display:flex;justify-content:space-between;align-items:center;padding:12px 22px 10px;gap:14px;}
+    .brand{display:flex;align-items:center;gap:10px;flex-shrink:0;}
+    .bt h1{font-size:17px;font-weight:800;color:#fff;letter-spacing:3px;white-space:nowrap;}
+    .bt .tm{font-size:7px;font-weight:700;color:#f9a825;letter-spacing:2.5px;text-transform:uppercase;margin-top:3px;}
+    .bt .ts{font-size:7px;color:rgba(255,255,255,0.45);font-style:italic;margin-top:2px;white-space:nowrap;}
+    .hd{width:1px;height:40px;background:rgba(255,255,255,0.18);flex-shrink:0;}
+    .dm{text-align:right;flex-shrink:0;}
+    .dm .lbl{font-size:7px;text-transform:uppercase;letter-spacing:2px;color:rgba(255,255,255,0.45);}
+    .dm .num{font-size:14px;font-weight:800;color:#f9a825;margin-top:2px;white-space:nowrap;}
+    .dm .dt{font-size:9px;color:rgba(255,255,255,0.6);margin-top:2px;white-space:nowrap;}
+    .gs{height:3px;background:linear-gradient(90deg,transparent,#f9a825 30%,#f9a825 70%,transparent);opacity:0.7;}
+    .sb{background:#1a1a2e;display:flex;justify-content:space-around;padding:6px 22px;flex-shrink:0;}
+    .sbi{text-align:center;}
+    .sbl{font-size:6.5px;text-transform:uppercase;letter-spacing:1.5px;color:rgba(255,255,255,0.5);font-weight:700;}
+    .sbv{font-size:11px;font-weight:800;color:#f9a825;margin-top:1px;}
+    .body{padding:10px 22px 8px;flex:1;display:flex;flex-direction:column;gap:8px;overflow:hidden;}
+
+    /* GREETING */
+    .greet{background:linear-gradient(135deg,#fff8e1,#fffde7);border:2px solid #f9a825;border-radius:7px;padding:10px 16px;flex-shrink:0;}
+    .gn{font-size:22px;font-weight:900;color:#0d3b6e;margin-bottom:5px;}
+    .gl{font-size:11.5px;color:#333;line-height:1.75;}
+    .gl strong{color:#0d3b6e;font-weight:700;}
+
+    /* INFO ROW */
+    .ir{display:flex;gap:8px;flex-shrink:0;}
+    .ic{flex:1;background:#f8f9ff;border:1px solid #dde3f0;border-top:3px solid #1a6bbf;border-radius:6px;padding:8px 12px;}
+    .ict{font-size:7px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:#1a6bbf;margin-bottom:6px;}
+    .icn{font-size:15px;font-weight:900;color:#0d3b6e;margin-bottom:4px;}
+    .icf{display:flex;align-items:center;gap:5px;font-size:10px;color:#444;margin-top:3px;}
+    .icf strong{color:#0d3b6e;}
+    .ic-deadline-label{font-size:7.5px;font-weight:800;text-transform:uppercase;letter-spacing:1px;color:#e65100;margin-top:8px;margin-bottom:2px;}
+    .ic-deadline{font-size:14px;font-weight:900;color:#e65100;line-height:1.2;}
+
+    /* ACTION SECTION */
+    .action-section{background:#0d3b6e;border-radius:8px;padding:10px 16px;flex-shrink:0;}
+    .action-title{font-size:9px;font-weight:800;text-transform:uppercase;letter-spacing:2.5px;color:#f9a825;margin-bottom:8px;text-align:center;border-bottom:1px solid rgba(249,168,37,0.3);padding-bottom:6px;}
+    .action-grid{display:flex;gap:0;}
+    .action-item{flex:1;display:flex;flex-direction:column;align-items:center;text-align:center;padding:6px 10px;border-right:1px solid rgba(255,255,255,0.15);}
+    .action-item:last-child{border-right:none;}
+    .action-num{background:#f9a825;color:#0d3b6e;font-size:9px;font-weight:900;width:20px;height:20px;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 6px;}
+    .action-icon{font-size:24px;margin-bottom:4px;}
+    .action-cmd{font-size:12px;font-weight:900;color:#f9a825;text-transform:uppercase;letter-spacing:0.5px;line-height:1.2;margin-bottom:5px;}
+    .action-val{font-size:12px;font-weight:800;color:white;line-height:1.3;margin-bottom:2px;}
+    .action-hint{font-size:9px;color:rgba(255,255,255,0.55);line-height:1.4;}
+
+    /* ITEMS TABLE */
+    .items-hdr{background:#0d3b6e;color:white;font-size:8px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;padding:5px 12px;border-radius:4px 4px 0 0;flex-shrink:0;}
+    .it{width:100%;border-collapse:collapse;}
+    .it thead tr{background:#1a1a2e;color:white;}
+    .it thead th{padding:5px 10px;text-align:left;font-size:8px;text-transform:uppercase;letter-spacing:0.8px;}
+    .it thead th.qty-col{width:120px;text-align:center;}
+    .it tbody tr:nth-child(even){background:#f8f9ff;}
+    .it tbody td{padding:5px 10px;border-bottom:1px solid #eef0f8;font-size:10.5px;color:#555;}
+    .it tbody td.item-num{color:#aaa;font-size:10px;width:24px;}
+    .it tbody td.item-qty{font-size:13px;font-weight:900;color:#0d3b6e;text-align:center;}
+
+    /* CONFIRMATION */
+    .confirm-wrap{display:flex;gap:6px;flex-shrink:0;}
+    .confirm-yes{flex:1;background:#f0fff4;border:2px solid #2e7d32;border-radius:7px;padding:8px 12px;}
+    .confirm-no{flex:1;background:#fff8f0;border:2px solid #e65100;border-radius:7px;padding:8px 12px;}
+    .cf-icon{font-size:20px;margin-bottom:4px;}
+    .cf-label{font-size:8px;font-weight:800;text-transform:uppercase;letter-spacing:2px;margin-bottom:4px;}
+    .cf-label.green{color:#2e7d32;}
+    .cf-label.orange{color:#e65100;}
+    .cf-outcome{font-size:10.5px;color:#333;margin-bottom:4px;line-height:1.5;}
+    .cf-msg{font-size:13px;font-weight:900;color:#1b5e20;}
+    .cf-phone{font-size:13px;font-weight:900;color:#e65100;margin-top:3px;}
+
+    /* FOOTER */
+    .footer{background:linear-gradient(135deg,#0a2d56 0%,#0d3b6e 60%,#1a5299 100%);flex-shrink:0;display:flex;justify-content:space-around;align-items:center;padding:9px 22px;}
+    .ft-item{text-align:center;flex:1;border-right:1px solid rgba(255,255,255,0.12);padding:0 8px;}
+    .ft-item:last-child{border-right:none;}
+    .ft-label{font-size:7px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:rgba(255,255,255,0.5);margin-bottom:2px;}
+    .ft-value{font-size:11px;font-weight:800;color:white;}
+    .ft-sub{font-size:7.5px;color:rgba(255,255,255,0.5);margin-top:1px;}
+    .ft-ref{font-size:7px;color:#f9a825;margin-top:2px;}
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="hm">
+      <div class="brand">
+        <svg width="44" height="44" viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="28" cy="28" r="27" fill="#0A2D56"/>
+          <circle cx="28" cy="28" r="25.5" fill="none" stroke="#C8A84E" stroke-width="2.5"/>
+          <circle cx="28" cy="28" r="18" fill="none" stroke="#C8A84E" stroke-width="0.8" opacity="0.5"/>
+          <ellipse cx="28" cy="28" rx="18" ry="8" fill="none" stroke="#C8A84E" stroke-width="0.7" opacity="0.4"/>
+          <line x1="10" y1="28" x2="46" y2="28" stroke="#C8A84E" stroke-width="0.7" opacity="0.4"/>
+          <ellipse cx="28" cy="28" rx="8" ry="18" fill="none" stroke="#C8A84E" stroke-width="0.7" opacity="0.4"/>
+          <text x="28" y="33" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="16" font-weight="900" fill="#C8A84E" letter-spacing="1">MG</text>
+        </svg>
+        <div class="bt">
+          <h1>MKONO GLOBAL</h1>
+          <div class="tm">Execution as a Service</div>
+          <div class="ts">Bridging the Diaspora to Home — With Precision, Integrity &amp; Speed</div>
+        </div>
+      </div>
+      <div class="hd"></div>
+      <div class="dm">
+        <div class="lbl">Collection Note</div>
+        <div class="num">#MKG-DN-2026-0429</div>
+        <div class="dt">Date: 11/07/2026</div>
+        <div class="dt">Collection: 2NK Sacco Head Office, Nyeri Town</div>
+        <div style="background:#f9a825;color:#0d3b6e;font-weight:700;padding:2px 8px;border-radius:10px;margin-top:3px;display:inline-block;font-size:8px;">📍 COLLECTION</div>
+      </div>
+    </div>
+    <div class="gs"></div>
+  </div>
+
+  <!-- SUMMARY BAR -->
+  <div class="sb">
+    <div class="sbi"><div class="sbl">Reference</div><div class="sbv">#MKG-DN-2026-0429</div></div>
+    <div class="sbi"><div class="sbl">Date</div><div class="sbv">11/07/2026</div></div>
+    <div class="sbi"><div class="sbl">Collection Point</div><div class="sbv">2NK SACCO, NYERI TOWN</div></div>
+    <div class="sbi"><div class="sbl">Total Items</div><div class="sbv">5 ITEMS</div></div>
+    <div class="sbi"><div class="sbl">Collect By</div><div class="sbv">11/07/2026 — 4:00 PM</div></div>
+  </div>
+
+  <div class="body">
+
+    <!-- GREETING -->
+    <div class="greet">
+      <div class="gn">🎁 Habari Charles!</div>
+      <div class="gl">
+        <strong>Josh</strong> has arranged a special Father's Day gift for you through <strong>Mkono Global</strong>.<br/>
+        Your items are on the way with <strong>2NK Sacco</strong> and will be available for collection at their Head Office in Nyeri Town.
+      </div>
+    </div>
+
+    <!-- INFO ROW -->
+    <div class="ir">
+      <div class="ic">
+        <div class="ict">👤 Beneficiary</div>
+        <div class="icn">Charles Wahome</div>
+        <div class="icf">☎ <strong>+254 794 701 341</strong></div>
+        <div class="icf">📍 Nyeri Town, Kenya</div>
+        <div class="icf">🎁 Father's Day Gift from Josh</div>
+      </div>
+      <div class="ic">
+        <div class="ict">📦 Collection Details</div>
+        <div class="icn">2NK Sacco Head Office</div>
+        <div class="icf">📍 Kangaru Corner House, Nyeri Town</div>
+        <div class="icf">☎ +254 706 262 689</div>
+        <div class="ic-deadline-label">📅 Collect By</div>
+        <div class="ic-deadline">Saturday, 11 July 2026<br/>4:00 PM East Africa Time</div>
+      </div>
+    </div>
+
+    <!-- ACTION SECTION — Collection specific -->
+    <div class="action-section">
+      <div class="action-title">⚡ TO COLLECT YOUR GIFT</div>
+      <div class="action-grid">
+        <div class="action-item">
+          <div class="action-num">①</div>
+          <div class="action-icon">📞</div>
+          <div class="action-cmd">Expect a Call</div>
+          <div class="action-val">From 2NK Sacco</div>
+          <div class="action-hint">They will call when items arrive</div>
+        </div>
+        <div class="action-item">
+          <div class="action-num">②</div>
+          <div class="action-icon">🏢</div>
+          <div class="action-cmd">Go to 2NK Sacco</div>
+          <div class="action-val">Head Office</div>
+          <div class="action-hint">Kangaru Corner House, Nyeri Town</div>
+        </div>
+        <div class="action-item">
+          <div class="action-num">③</div>
+          <div class="action-icon">📦</div>
+          <div class="action-cmd">Check Your Items</div>
+          <div class="action-val">5 Items</div>
+          <div class="action-hint">Before leaving</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ITEMS TABLE -->
+    <div style="flex-shrink:0;">
+      <div class="items-hdr">🎁 Your 5 Gift Items — Check Each One</div>
+      <table class="it">
+        <thead>
+          <tr><th>#</th><th>Item</th><th class="qty-col">Quantity</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="item-num">1</td><td>Suit</td><td class="item-qty">1 item</td></tr>
+          <tr><td class="item-num">2</td><td>Tie</td><td class="item-qty">1 item</td></tr>
+          <tr><td class="item-num">3</td><td>Belt</td><td class="item-qty">1 item</td></tr>
+          <tr><td class="item-num">4</td><td>Shirt — Nens Slim Gold, Size L</td><td class="item-qty">1 item</td></tr>
+          <tr><td class="item-num">5</td><td>Shoes</td><td class="item-qty">1 pair</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- CONFIRMATION -->
+    <div class="confirm-wrap">
+      <div class="confirm-yes">
+        <div class="cf-icon">✅</div>
+        <div class="cf-label green">Everything is Correct</div>
+        <div class="cf-outcome">WhatsApp +254 706 262 689</div>
+        <div class="cf-msg">"Received everything — all good."</div>
+      </div>
+      <div class="confirm-no">
+        <div class="cf-icon">⚠️</div>
+        <div class="cf-label orange">Something is Missing</div>
+        <div class="cf-outcome">Do not leave the collection point.<br/>Call Mkono Global immediately.</div>
+        <div class="cf-phone">+254 706 262 689</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div class="ft-item">
+      <div class="ft-label">📞 Mkono Global</div>
+      <div class="ft-value">+254 706 262 689</div>
+      <div class="ft-sub">WhatsApp / Call</div>
+    </div>
+    <div class="ft-item">
+      <div class="ft-label">📦 Collection Point</div>
+      <div class="ft-value">2NK Sacco Head Office</div>
+      <div class="ft-sub">Kangaru Corner House, Nyeri Town</div>
+    </div>
+    <div class="ft-item">
+      <div class="ft-label">📅 Collect By</div>
+      <div class="ft-value" style="color:#e65100;">11/07/2026 — 4:00 PM</div>
+      <div class="ft-ref">#MKG-DN-2026-0429 · Confidential</div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

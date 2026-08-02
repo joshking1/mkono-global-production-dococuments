@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Order Completed — Mkono Global #MKG-2026-0428</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Jost:wght@300;400;500;600;700&display=swap');
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: #f0f2f5; font-family: 'Jost', sans-serif; color: #1a1a2e; padding: 10px 20px; }
+    .email-wrap { max-width: 620px; margin: 0 auto; }
+    .pre-header { text-align: center; font-size: 11px; color: #888; letter-spacing: 1px; margin-bottom: 8px; }
+    .email-header { background: linear-gradient(135deg, #0a2d56 0%, #0d3b6e 55%, #1a5299 100%); padding: 16px 28px 0; border-radius: 8px 8px 0 0; }
+    .header-top { display: flex; justify-content: space-between; align-items: center; padding-bottom: 14px; border-bottom: 1px solid rgba(255,255,255,0.12); }
+    .logo-area { display: flex; align-items: center; gap: 14px; }
+    .brand-name { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 700; color: #fff; letter-spacing: 3px; line-height: 1; }
+    .brand-tag { font-size: 8px; font-weight: 600; color: #f9a825; letter-spacing: 2.5px; text-transform: uppercase; margin-top: 5px; }
+    .ref-badge { text-align: right; }
+    .ref-label { font-size: 8px; color: rgba(255,255,255,0.45); letter-spacing: 2px; text-transform: uppercase; }
+    .ref-number { font-family: 'Cormorant Garamond', serif; font-size: 18px; font-weight: 700; color: #f9a825; margin-top: 2px; }
+    .gold-strip { height: 3px; background: linear-gradient(90deg, transparent, #f9a825 25%, #f9a825 75%, transparent); opacity: 0.8; }
+    .hero-banner { background: linear-gradient(135deg, #1b5e20 0%, #2e7d32 60%, #388e3c 100%); padding: 16px 28px; display: flex; align-items: center; gap: 20px; }
+    .hero-icon-wrap { width: 60px; height: 60px; background: rgba(255,255,255,0.15); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 28px; flex-shrink: 0; border: 2px solid rgba(255,255,255,0.3); }
+    .hero-text h2 { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 700; color: #fff; line-height: 1.1; }
+    .hero-text p { font-size: 11px; color: rgba(255,255,255,0.8); margin-top: 5px; line-height: 1.5; }
+    .hero-pill { margin-left: auto; background: #f9a825; color: #1b5e20; font-size: 11px; font-weight: 700; padding: 6px 16px; border-radius: 20px; white-space: nowrap; flex-shrink: 0; }
+    .email-body { background: #fff; padding: 18px 28px; }
+    .salutation { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 600; color: #0d3b6e; margin-bottom: 8px; }
+    .email-body p { font-size: 11.5px; color: #333; line-height: 1.6; margin-bottom: 10px; }
+    .email-body p strong { color: #0d3b6e; font-weight: 600; }
+    .order-card { background: #f8f9ff; border: 1px solid #dde3f0; border-left: 4px solid #1a6bbf; border-radius: 6px; padding: 10px 14px; margin: 14px 0; }
+    .order-card-title { font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: #1a6bbf; margin-bottom: 8px; }
+    .order-detail-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5px 12px; }
+    .od-field .ok { font-size: 9px; text-transform: uppercase; letter-spacing: 1px; color: #999; font-weight: 600; margin-bottom: 2px; }
+    .od-field .ov { font-size: 11px; font-weight: 600; color: #0d3b6e; }
+    .proof-section { background: #f0fff4; border: 1px solid #c8e6c9; border-radius: 6px; padding: 10px 14px; margin: 14px 0; }
+    .proof-title { font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: #2e7d32; margin-bottom: 8px; }
+    .proof-item { display: flex; align-items: center; gap: 10px; font-size: 11.5px; color: #333; padding: 5px 0; border-bottom: 1px solid #e8f5e9; }
+    .proof-item:last-child { border-bottom: none; }
+    .proof-dot { width: 8px; height: 8px; background: #2e7d32; border-radius: 50%; flex-shrink: 0; }
+    .closing-line { border-top: 1px solid #eef0f8; padding-top: 12px; margin-top: 8px; }
+    .signature { margin-top: 10px; padding-top: 12px; border-top: 1px solid #eef0f8; }
+    .sig-name { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 700; color: #0d3b6e; margin-bottom: 2px; }
+    .sig-title { font-size: 11px; color: #888; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; }
+    .sig-contacts { display: flex; gap: 20px; }
+    .sig-contact { font-size: 11px; color: #555; }
+    .sig-contact span { font-weight: 600; color: #0d3b6e; }
+    .email-footer { background: linear-gradient(135deg, #0a2d56 0%, #0d3b6e 100%); padding: 20px 40px; border-radius: 0 0 8px 8px; }
+    .footer-brand { font-family: 'Cormorant Garamond', serif; font-size: 11px; font-weight: 600; color: white; letter-spacing: 2px; text-align: center; margin-bottom: 6px; }
+    .footer-tagline { font-size: 10px; color: rgba(255,255,255,0.5); text-align: center; font-style: italic; }
+    .footer-ref { text-align: center; margin-top: 8px; font-size: 9px; color: #f9a825; letter-spacing: 1px; }
+    .disclaimer { text-align: center; font-size: 10px; color: #aaa; margin-top: 10px; line-height: 1.6; }
+  </style>
+</head>
+<body>
+<div class="email-wrap">
+
+<div class="email-header">
+    <div class="header-top">
+      <div class="logo-area">
+        <svg width="48" height="48" viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="28" cy="28" r="27" fill="#0A2D56"/>
+          <circle cx="28" cy="28" r="25.5" fill="none" stroke="#C8A84E" stroke-width="2.5"/>
+          <circle cx="28" cy="28" r="18" fill="none" stroke="#C8A84E" stroke-width="0.8" opacity="0.5"/>
+          <ellipse cx="28" cy="28" rx="18" ry="8" fill="none" stroke="#C8A84E" stroke-width="0.7" opacity="0.4"/>
+          <line x1="10" y1="28" x2="46" y2="28" stroke="#C8A84E" stroke-width="0.7" opacity="0.4"/>
+          <ellipse cx="28" cy="28" rx="8" ry="18" fill="none" stroke="#C8A84E" stroke-width="0.7" opacity="0.4"/>
+          <text x="28" y="33" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="16" font-weight="900" fill="#C8A84E" letter-spacing="1">MG</text>
+        </svg>
+        <div>
+          <div class="brand-name">MKONO GLOBAL</div>
+          <div class="brand-tag">Execution as a Service</div>
+        </div>
+      </div>
+      <div class="ref-badge">
+        <div class="ref-label">Invoice Reference</div>
+        <div class="ref-number">#MKG-2026-0428</div>
+      </div>
+    </div>
+    <div class="gold-strip"></div>
+  </div>
+
+  <div class="hero-banner">
+    <div class="hero-icon-wrap">🏁</div>
+    <div class="hero-text">
+      <h2>Order Successfully Completed</h2>
+      <p>Grocery Order collected by ANN NYA, Chaka, Nyeri &nbsp;·&nbsp; 10/07/2026</p>
+    </div>
+    <div class="hero-pill">CLOSED ✓</div>
+  </div>
+
+  <div class="email-body">
+
+    <div class="salutation">Dear JK,</div>
+
+    <p>
+      We are pleased to confirm that your order has been <strong>successfully completed and delivered</strong> in full.
+    </p>
+
+    <p>
+      All 6 grocery items were procured, quality-checked, and collected by <strong>ANN NYA</strong> from <strong>Roadmap Supermarket, Chaka, Nyeri</strong> on <strong>10/07/2026</strong>, on or before the committed time of <strong>4:00 PM EAT.</strong>
+    </p>
+
+    <div class="order-card">
+      <div class="order-card-title">📋 Order Summary</div>
+      <div class="order-detail-grid">
+        <div class="od-field"><div class="ok">Order Reference</div><div class="ov">#MKG-2026-0428</div></div>
+        <div class="od-field"><div class="ok">Client</div><div class="ov">JK (USA)</div></div>
+        <div class="od-field"><div class="ok">Beneficiary</div><div class="ov">ANN NYA</div></div>
+        <div class="od-field"><div class="ok">Collection Point</div><div class="ov">Roadmap Supermarket, Chaka</div></div>
+        <div class="od-field"><div class="ok">Delivery Date</div><div class="ov">10/07/2026</div></div>
+        <div class="od-field"><div class="ok">Status</div><div class="ov" style="color:#1b5e20;">🏁 Completed</div></div>
+      </div>
+    </div>
+
+    <div class="proof-section">
+      <div class="proof-title">📲 Proof of Delivery Sent to Your WhatsApp</div>
+      <div class="proof-item"><div class="proof-dot"></div>Photos of all 6 items purchased with receipts</div>
+      <div class="proof-item"><div class="proof-dot"></div>Collection confirmation — items collected by ANN NYA</div>
+      <div class="proof-item"><div class="proof-dot"></div>WhatsApp confirmation received from ANN NYA</div>
+      <div class="proof-item"><div class="proof-dot"></div>Completed invoice attached to this communication</div>
+    </div>
+
+    <div class="closing-line">
+      <p>
+        Every item on your list was sourced and collected with care. Thank you for trusting Mkono Global to look after Ann.
+      </p>
+      <p>
+        Should you have any questions regarding this order, please reach out to us on WhatsApp at any time.
+      </p>
+    </div>
+
+    <div class="signature">
+      <div class="sig-name">Mkono Global Team</div>
+      <div class="sig-title">Execution as a Service</div>
+      <div class="sig-contacts">
+        <div class="sig-contact">🇺🇸 <span>+1 555 854 0662</span> &nbsp;WhatsApp USA</div>
+        <div class="sig-contact">🇰🇪 <span>+1 555 854 0662</span> &nbsp;WhatsApp Kenya</div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="email-footer">
+    <div class="footer-brand">MKONO GLOBAL</div>
+    <div class="footer-tagline">Bridging the Diaspora to Home — With Precision, Integrity and Speed</div>
+    <div class="footer-ref">Invoice #MKG-2026-0428 &nbsp;·&nbsp; 10/07/2026 &nbsp;·&nbsp; Confidential Communication</div>
+  </div>
+
+
+
+</div>
+</body>
+</html>

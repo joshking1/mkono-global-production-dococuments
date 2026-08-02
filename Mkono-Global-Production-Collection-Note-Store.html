@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <title>Collection Note #MKG-DN-2026-0426</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+    *{margin:0;padding:0;box-sizing:border-box;}
+    @page{size:A4;margin:0;}
+    body{font-family:"Inter",sans-serif;background:#fff;width:210mm;margin:0;padding:0;}
+    .page{width:210mm;height:297mm;overflow:hidden;display:flex;flex-direction:column;border-left:5px solid #1a6bbf;}
+    .header{background:linear-gradient(135deg,#0a2d56 0%,#0d3b6e 60%,#1a5299 100%);display:flex;flex-direction:column;flex-shrink:0;}
+    .hm{display:flex;justify-content:space-between;align-items:center;padding:12px 22px 10px;gap:14px;}
+    .brand{display:flex;align-items:center;gap:10px;flex-shrink:0;}
+    .bt h1{font-size:17px;font-weight:800;color:#fff;letter-spacing:3px;white-space:nowrap;}
+    .bt .tm{font-size:7px;font-weight:700;color:#f9a825;letter-spacing:2.5px;text-transform:uppercase;margin-top:3px;}
+    .bt .ts{font-size:7px;color:rgba(255,255,255,0.45);font-style:italic;margin-top:2px;white-space:nowrap;}
+    .hd{width:1px;height:40px;background:rgba(255,255,255,0.18);flex-shrink:0;}
+    .dm{text-align:right;flex-shrink:0;}
+    .dm .lbl{font-size:7px;text-transform:uppercase;letter-spacing:2px;color:rgba(255,255,255,0.45);}
+    .dm .num{font-size:14px;font-weight:800;color:#f9a825;margin-top:2px;white-space:nowrap;}
+    .dm .dt{font-size:9px;color:rgba(255,255,255,0.6);margin-top:2px;white-space:nowrap;}
+    .gs{height:3px;background:linear-gradient(90deg,transparent,#f9a825 30%,#f9a825 70%,transparent);opacity:0.7;}
+    .sb{background:#1a1a2e;display:flex;justify-content:space-around;padding:6px 22px;flex-shrink:0;}
+    .sbi{text-align:center;}
+    .sbl{font-size:6.5px;text-transform:uppercase;letter-spacing:1.5px;color:rgba(255,255,255,0.5);font-weight:700;}
+    .sbv{font-size:11px;font-weight:800;color:#f9a825;margin-top:1px;}
+    .body{padding:10px 22px 8px;flex:1;display:flex;flex-direction:column;gap:8px;overflow:hidden;}
+    .greet{background:linear-gradient(135deg,#fff8e1,#fffde7);border:2px solid #f9a825;border-radius:7px;padding:10px 14px;flex-shrink:0;}
+    .gn{font-size:20px;font-weight:900;color:#0d3b6e;margin-bottom:4px;}
+    .gt{font-size:11px;color:#333;line-height:1.65;}
+    .gt strong{color:#0d3b6e;}
+    .ir{display:flex;gap:8px;flex-shrink:0;}
+    .ic{flex:1;background:#f8f9ff;border:1px solid #dde3f0;border-radius:6px;padding:8px 12px;}
+    .ict{font-size:7px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:#1a6bbf;margin-bottom:6px;}
+    .icn{font-size:14px;font-weight:800;color:#0d3b6e;margin-bottom:3px;}
+    .icf{display:flex;align-items:center;gap:5px;font-size:10px;color:#444;margin-top:2px;}
+    .pin-box{background:#0d3b6e;border-radius:7px;padding:10px 16px;flex-shrink:0;text-align:center;}
+    .pl{font-size:7.5px;font-weight:700;text-transform:uppercase;letter-spacing:3px;color:rgba(255,255,255,0.6);margin-bottom:2px;}
+    .pi{font-size:9.5px;color:rgba(255,255,255,0.7);margin-bottom:6px;}
+    .pc{font-size:44px;font-weight:900;color:#f9a825;letter-spacing:10px;font-family:"Inter",monospace;line-height:1;}
+    .ps{font-size:9.5px;color:rgba(255,255,255,0.6);margin-top:6px;}
+    .ps strong{color:#f9a825;}
+    .steps-hdr{background:#1a6bbf;color:white;font-size:8px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;padding:5px 12px;border-radius:4px 4px 0 0;flex-shrink:0;}
+    .steps{border:1px solid #dde3f0;border-top:none;border-radius:0 0 5px 5px;overflow:hidden;flex-shrink:0;}
+    .step{display:flex;align-items:flex-start;gap:8px;padding:6px 12px;border-bottom:1px solid #eef0f8;font-size:10.5px;color:#333;line-height:1.4;}
+    .step:last-child{border-bottom:none;background:#f0fff4;}
+    .step:nth-child(even){background:#f8f9ff;}
+    .sn{background:#1a6bbf;color:white;font-size:9px;font-weight:800;min-width:18px;height:18px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;}
+    .step strong{color:#0d3b6e;}
+    .items-hdr{background:#0d3b6e;color:white;font-size:8px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;padding:5px 12px;border-radius:4px 4px 0 0;flex-shrink:0;}
+    .it{width:100%;border-collapse:collapse;font-size:10.5px;}
+    .it thead tr{background:#1a1a2e;color:white;}
+    .it thead th{padding:5px 10px;text-align:left;font-size:8px;text-transform:uppercase;letter-spacing:0.8px;}
+    .it tbody tr:nth-child(even){background:#f8f9ff;}
+    .it tbody td{padding:5px 10px;border-bottom:1px solid #eef0f8;color:#333;}
+    .it tbody td strong{color:#0d3b6e;font-weight:700;}
+    .cb{background:#f0f5ff;border-top:2px solid #1a6bbf;display:flex;justify-content:space-around;padding:7px 22px;flex-shrink:0;}
+    .ci{text-align:center;flex:1;border-right:1px solid #dde3f0;padding:0 6px;}
+    .ci:last-child{border-right:none;}
+    .ct{font-size:7px;font-weight:700;color:#1a6bbf;letter-spacing:0.5px;margin-bottom:1px;}
+    .cv{font-size:10.5px;font-weight:800;color:#0d3b6e;}
+    .cl{font-size:7.5px;color:#999;margin-top:1px;}
+    .foot{background:linear-gradient(135deg,#0a2d56 0%,#0d3b6e 60%,#1a5299 100%);color:rgba(255,255,255,0.7);text-align:center;font-size:7.5px;padding:7px 20px;line-height:1.8;flex-shrink:0;}
+    .foot strong{color:white;}
+    .fr{color:#f9a825;font-size:7px;margin-top:1px;}
+  </style>
+</head>
+<body>
+<div class="page">
+  <div class="header">
+    <div class="hm">
+      <div class="brand"><svg width="44" height="44" viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="28" cy="28" r="27" fill="#0A2D56"/>
+  <circle cx="28" cy="28" r="25.5" fill="none" stroke="#C8A84E" stroke-width="2.5"/>
+  <circle cx="28" cy="28" r="18" fill="none" stroke="#C8A84E" stroke-width="0.8" opacity="0.5"/>
+  <ellipse cx="28" cy="28" rx="18" ry="8" fill="none" stroke="#C8A84E" stroke-width="0.7" opacity="0.4"/>
+  <line x1="10" y1="28" x2="46" y2="28" stroke="#C8A84E" stroke-width="0.7" opacity="0.4"/>
+  <ellipse cx="28" cy="28" rx="8" ry="18" fill="none" stroke="#C8A84E" stroke-width="0.7" opacity="0.4"/>
+  <text x="28" y="33" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="16" font-weight="900" fill="#C8A84E" letter-spacing="1">MG</text>
+</svg><div class="bt"><h1>MKONO GLOBAL</h1><div class="tm">Execution as a Service</div><div class="ts">Bridging the Diaspora to Home — With Precision, Integrity &amp; Speed</div></div></div>
+      <div class="hd"></div>
+      <div class="dm">
+        <div class="lbl">Collection Note</div>
+        <div class="num">#MKG-DN-2026-0426</div>
+        <div class="dt">Date: 28/05/2026 EAT</div>
+        <div class="dt">Collection Point: Naivas Kubwa, Naivasha</div>
+        <div style="background:#f9a825;color:#0d3b6e;font-weight:700;padding:2px 8px;border-radius:10px;margin-top:3px;display:inline-block;font-size:8px;">📍 PIN COLLECTION</div>
+      </div>
+    </div>
+    <div class="gs"></div>
+  </div>
+
+  <div class="sb">
+    <div class="sbi"><div class="sbl">Reference</div><div class="sbv">#MKG-DN-2026-0426</div></div>
+    <div class="sbi"><div class="sbl">Date</div><div class="sbv">28/05/2026 EAT</div></div>
+    <div class="sbi"><div class="sbl">Collection Point</div><div class="sbv">NAIVAS KUBWA, NAIVASHA</div></div>
+    <div class="sbi"><div class="sbl">Total Items</div><div class="sbv">9 ITEMS</div></div>
+    <div class="sbi"><div class="sbl">Collection PIN</div><div class="sbv">048979</div></div>
+  </div>
+
+  <div class="body">
+    <div class="greet">
+      <div class="gn">🛍️ Habari Ananiah!</div>
+      <div class="gt">Surprise! <strong>LAJ</strong> in the <strong>USA</strong> has organised something special for you and the boys through <strong>Mkono Global</strong>. 🎉 Your items are all ready and waiting at <strong>Naivas Kubwa, Naivasha</strong>. Go pick them up anytime — use your PIN below and the store will take care of you.</div>
+    </div>
+
+    <div class="ir">
+      <div class="ic">
+        <div class="ict">👤 Beneficiary</div>
+        <div class="icn">Ananiah Ogutu</div>
+        <div class="icf"><span>📞</span> +254 794 426 550</div>
+        <div class="icf"><span>📍</span> Naivas Kubwa, Naivasha</div>
+        <div class="icf"><span>🎁</span> A surprise from LAJ with love ❤️</div>
+        <div class="icf"><span>🇺🇸</span> Arranged by: LAJ — USA</div>
+      </div>
+      <div class="ic">
+        <div class="ict">🏪 Collection Store</div>
+        <div class="icn">Naivas Kubwa</div>
+        <div class="icf"><span>📍</span> Naivasha, Kenya</div>
+        <div style="font-size:7.5px;font-weight:700;color:#e65100;text-transform:uppercase;letter-spacing:1px;margin-top:5px;">Your Collection PIN</div>
+        <div style="font-size:24px;font-weight:900;color:#f9a825;letter-spacing:5px;margin-top:1px;">048979</div>
+        <div class="icf"><span>🇰🇪</span> +254 706 262 689</div>
+        <div class="icf"><span>🇺🇸</span> +1 484 985 0420</div>
+      </div>
+    </div>
+
+    <div class="pin-box">
+      <div class="pl">📍 Your Collection PIN — Show or Quote This at Naivas Kubwa</div>
+      <div class="pc">048979</div>
+      <div class="ps">This PIN is registered with <strong>Naivas Kubwa, Naivasha</strong>. The store attendant will use this PIN to release your items.</div>
+    </div>
+
+    <div style="flex-shrink:0;">
+      <div class="steps-hdr">📋 How to Pick Up — Simple Steps</div>
+      <div class="steps">
+        <div class="step"><div class="sn">1</div><div>Head to <strong>Naivas Kubwa, Naivasha</strong> — your items are there waiting for you</div></div>
+        <div class="step"><div class="sn">2</div><div>At customer care, say you are collecting a <strong>Mkono Global order</strong> and give PIN: <strong style="color:#e65100;letter-spacing:2px;">048979</strong></div></div>
+        <div class="step"><div class="sn">3</div><div>Check all <strong>9 items</strong> against this note before you leave the store</div></div>
+        <div class="step"><div class="sn">4</div><div>Send a quick WhatsApp to <strong>+254 706 262 689</strong>: <strong style="color:#1b5e20;">"All collected — everything matches."</strong></div></div>
+      </div>
+    </div>
+
+    <div style="flex-shrink:0;">
+      <div class="items-hdr">🧾 Your 9 Items — Check Each One</div>
+      <table class="it">
+        <thead><tr><th>#</th><th>Item Description</th><th>Quantity</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td><strong>Nuvita Short Cake Jar 900g</strong></td><td>1 jar</td></tr>
+          <tr><td>2</td><td><strong>Tropical Heat Salted Potato Crisps 50g</strong></td><td>4 packs</td></tr>
+          <tr><td>3</td><td><strong>Crackles Tangy Tomato</strong></td><td>4 packs</td></tr>
+          <tr><td>4</td><td><strong>Delmonte Juice Blend Mango 250ml</strong></td><td>10 packs</td></tr>
+          <tr><td>5</td><td><strong>Manji Choco Chip Cookies 500g</strong></td><td>1 pack</td></tr>
+          <tr><td>6</td><td><strong>Millbakers Queen Cakes 200g</strong></td><td>4 packs</td></tr>
+          <tr><td>7</td><td><strong>Rina Cooking Oil 10 Litres</strong></td><td>1 item</td></tr>
+          <tr><td>8</td><td><strong>Weetabix Original</strong></td><td>1 packet</td></tr>
+          <tr><td>9</td><td><strong>Brookside Fresh Milk</strong></td><td>12 packets</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="cb">
+    <div class="ci"><div class="ct">🇰🇪 Kenya Office</div><div class="cv">+254 706 262 689</div><div class="cl">WhatsApp / Call</div></div>
+    <div class="ci"><div class="ct">🇺🇸 USA Office</div><div class="cv">+1 484 985 0420</div><div class="cl">WhatsApp — Primary</div></div>
+    <div class="ci"><div class="ct">📍 Collection PIN</div><div class="cv" style="color:#e65100;letter-spacing:3px;">048979</div><div class="cl">Naivas Kubwa, Naivasha</div></div>
+  </div>
+
+  <div class="foot">
+    <strong>MKONO GLOBAL</strong> &nbsp;·&nbsp; Execution as a Service &nbsp;·&nbsp; <em>Bridging the Diaspora to Home — With Precision, Integrity &amp; Speed</em>
+    <div class="fr">Collection Note #MKG-DN-2026-0426 &nbsp;·&nbsp; 28/05/2026 EAT &nbsp;·&nbsp; Confidential</div>
+  </div>
+</div>
+</body>
+</html>
