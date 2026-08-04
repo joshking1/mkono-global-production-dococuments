@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8">
+<style>
+@page { size: 250mm 375mm; margin: 0; }
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family: 'Jost','Helvetica Neue',sans-serif; background: #091e3a; }
+
+.page {
+    width: 250mm;
+    background: #091e3a;
+    border: 2.5px solid #c8a84e;
+}
+
+.header {
+    text-align: center;
+    padding: 8mm 6mm 3mm 6mm;
+}
+.logo-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5mm;
+    margin-bottom: 3.5mm;
+}
+.company-name { font-size: 28pt; font-weight: 700; color: white; letter-spacing: 5pt; }
+.company-desc { font-size: 10pt; color: #c8a84e; letter-spacing: 4pt; text-transform: uppercase; margin-top: 1.5mm; }
+.auth-title { font-family: 'Cormorant Garamond',Georgia,serif; font-size: 34pt; font-weight: 700; color: #c8a84e; letter-spacing: 3pt; margin-top: 3mm; }
+.auth-promise {
+    font-size: 11pt;
+    color: white;
+    margin-top: 2mm;
+    font-weight: 400;
+    line-height: 1.7;
+}
+
+.columns {
+    display: flex;
+    gap: 4mm;
+    margin: 4mm 6mm 0 6mm;
+}
+.col {
+    flex: 1;
+    background: #faf8f3;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.col-header {
+    background: linear-gradient(135deg, #0a2d56, #103d6e);
+    padding: 4.5mm 5mm;
+    display: flex;
+    align-items: center;
+    gap: 3mm;
+    border-bottom: 2px solid #c8a84e;
+}
+.col-icon {
+    width: 12mm; height: 12mm;
+    background: #c8a84e;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+.col-icon span { font-size: 14pt; color: #0a2d56; }
+.col-title { font-size: 17pt; font-weight: 700; color: white; letter-spacing: 1.5pt; }
+.col-subtitle { font-size: 8pt; color: #c8a84e; letter-spacing: 1pt; }
+.col-body { padding: 3.5mm 5mm; }
+
+.d-row {
+    display: flex;
+    align-items: center;
+    gap: 3mm;
+    padding: 2.8mm 0;
+    border-bottom: 1px solid #e8e3d8;
+}
+.d-row:last-child { border-bottom: none; }
+.d-icon {
+    width: 9.5mm; height: 9.5mm;
+    background: #0a2d56;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+.d-icon span { color: #c8a84e; font-size: 10pt; }
+.d-icon-text { color: #c8a84e !important; font-size: 8pt !important; font-weight: 700; }
+.d-label { font-size: 7pt; color: #c8a84e; letter-spacing: 1.8pt; text-transform: uppercase; font-weight: 600; }
+.d-value { font-size: 13pt; color: #0a2d56; font-weight: 700; margin-top: 0.3mm; }
+.d-value-med { font-size: 11.5pt; color: #0a2d56; font-weight: 600; margin-top: 0.3mm; }
+.d-value-line { font-size: 10.5pt; color: #0a2d56; font-weight: 500; margin-top: 0.2mm; }
+.d-value-highlight {
+    font-size: 17pt; color: #0a2d56; font-weight: 800; letter-spacing: 2pt;
+    border: 2px solid #c8a84e; padding: 2.5mm 4mm; border-radius: 5px;
+    display: inline-block; margin-top: 1mm; background: #faf8f3;
+}
+.d-value-acct {
+    font-size: 13pt; color: #0a2d56; font-weight: 800; letter-spacing: 1.5pt;
+    border: 2px solid #c8a84e; padding: 2mm 3.5mm; border-radius: 5px;
+    display: inline-block; margin-top: 1mm; background: #faf8f3;
+}
+
+.compat {
+    margin-top: 3mm;
+    padding: 2.5mm 3.5mm;
+    background: #f5f2ec;
+    border-radius: 5px;
+    border: 1px solid #e8e3d8;
+    text-align: center;
+}
+.compat-title { font-size: 6.5pt; color: #c8a84e; letter-spacing: 2.5pt; text-transform: uppercase; font-weight: 700; margin-bottom: 1.5mm; }
+.compat-list { font-size: 9pt; color: #0a2d56; font-weight: 600; line-height: 1.6; }
+.compat-note { font-size: 6.5pt; color: #999; margin-top: 1mm; font-style: italic; }
+
+.guidance {
+    margin-top: 3mm;
+    padding-top: 2.5mm;
+    border-top: 1px solid #e8e3d8;
+}
+.guidance-title { font-size: 8.5pt; color: #c8a84e; letter-spacing: 2.5pt; text-transform: uppercase; font-weight: 700; margin-bottom: 2mm; }
+.guidance-item { display: flex; align-items: flex-start; gap: 2mm; margin-bottom: 1.8mm; }
+.guidance-check { color: #c8a84e; font-size: 8.5pt; font-weight: 700; flex-shrink: 0; margin-top: 0.2mm; }
+.guidance-text { font-size: 8pt; color: #555; line-height: 1.5; }
+
+.next-section {
+    margin: 4mm 6mm 0 6mm;
+}
+.next-title {
+    text-align: center;
+    font-family: 'Cormorant Garamond',Georgia,serif;
+    font-size: 21pt; font-weight: 700; color: #c8a84e;
+    letter-spacing: 3pt; margin-bottom: 4mm;
+}
+.steps {
+    display: flex;
+    align-items: flex-start;
+    background: #faf8f3;
+    border-radius: 10px;
+    padding: 7mm 5mm 8mm 5mm;
+    position: relative;
+}
+.steps::before {
+    content: '';
+    position: absolute;
+    top: 15mm;
+    left: 10%;
+    right: 10%;
+    height: 2px;
+    background: #c8a84e;
+    z-index: 1;
+}
+.step { flex: 1; text-align: center; padding: 0 3mm; }
+.step-num {
+    width: 16mm; height: 16mm;
+    background: #c8a84e; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 4mm auto;
+    font-size: 15pt; font-weight: 800; color: #0a2d56;
+    position: relative; z-index: 2;
+    border: 3px solid #091e3a;
+}
+.step-title { font-size: 11pt; font-weight: 700; color: #0a2d56; margin-bottom: 2.5mm; letter-spacing: 0.3pt; }
+.step-sub { font-size: 8pt; color: #777; line-height: 1.5; font-style: italic; }
+
+.footer-band {
+    background: #c8a84e;
+    padding: 5mm 6mm;
+    text-align: center;
+    margin-top: 4mm;
+}
+.footer-brand { font-size: 17pt; font-weight: 700; color: #0a2d56; letter-spacing: 5pt; }
+.footer-desc { font-size: 8pt; color: #0a2d56bb; letter-spacing: 4pt; margin-top: 0.8mm; text-transform: uppercase; }
+.footer-tagline { font-size: 11pt; font-weight: 800; color: #0a2d56; letter-spacing: 5pt; margin-top: 2mm; }
+</style>
+</head><body>
+<div class="page">
+
+    <div class="header">
+        <div class="logo-row">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="78" height="78">
+                <circle cx="100" cy="100" r="96" fill="#0a2d56" stroke="#c8a84e" stroke-width="5"/>
+                <ellipse cx="100" cy="100" rx="40" ry="92" fill="none" stroke="#c8a84e" stroke-width="2" opacity="0.6"/>
+                <ellipse cx="100" cy="100" rx="70" ry="92" fill="none" stroke="#c8a84e" stroke-width="2" opacity="0.4"/>
+                <line x1="8" y1="100" x2="192" y2="100" stroke="#c8a84e" stroke-width="2" opacity="0.5"/>
+                <line x1="100" y1="8" x2="100" y2="192" stroke="#c8a84e" stroke-width="2" opacity="0.5"/>
+                <ellipse cx="100" cy="70" rx="80" ry="24" fill="none" stroke="#c8a84e" stroke-width="1.2" opacity="0.3"/>
+                <ellipse cx="100" cy="130" rx="80" ry="24" fill="none" stroke="#c8a84e" stroke-width="1.2" opacity="0.3"/>
+                <text x="100" y="112" text-anchor="middle" font-family="Georgia,serif" font-size="30" font-weight="bold" fill="#c8a84e">MG</text>
+            </svg>
+            <div>
+                <div class="company-name">MKONO GLOBAL</div>
+                <div class="company-desc">Execution as a Service</div>
+            </div>
+        </div>
+        <div class="auth-title">AUTHORIZE YOUR EXECUTION</div>
+        <div class="auth-promise">Upon authorization, Mkono Global formally assumes responsibility for your execution.<br/>From that moment forward, we coordinate every stage until verified completion.</div>
+    </div>
+
+    <div class="columns">
+        <div class="col">
+            <div class="col-header">
+                <div class="col-icon"><span>&#128241;</span></div>
+                <div><div class="col-title">MOBILE MONEY</div><div class="col-subtitle">M-Pesa &amp; Supported Providers</div></div>
+            </div>
+            <div class="col-body">
+                <div class="d-row">
+                    <div class="d-icon"><span>&#128100;</span></div>
+                    <div><div class="d-label">Business Name</div><div class="d-value">Mkono Global</div></div>
+                </div>
+                <div class="d-row">
+                    <div class="d-icon"><span>&#128101;</span></div>
+                    <div><div class="d-label">Registered Payment Name</div><div class="d-value-line">First Name: &nbsp;&nbsp;<strong>Mkono</strong></div><div class="d-value-line">Last Name: &nbsp;&nbsp;<strong>Global</strong></div></div>
+                </div>
+                <div class="d-row">
+                    <div class="d-icon"><span>&#128222;</span></div>
+                    <div><div class="d-label">Send Money</div><div class="d-value-highlight">+254 706 262 689</div></div>
+                </div>
+                <div class="compat">
+                    <div class="compat-title">Compatible With</div>
+                    <div class="compat-list">M-Pesa · Sendwave · Remitly · WorldRemit · Wise</div>
+                    <div class="compat-note">and other compatible money transfer providers.</div>
+                </div>
+                <div class="guidance">
+                    <div class="guidance-title">Before You Send</div>
+                    <div class="guidance-item"><span class="guidance-check">&#10003;</span><span class="guidance-text">Verify the phone number before sending.</span></div>
+                    <div class="guidance-item"><span class="guidance-check">&#10003;</span><span class="guidance-text">Send the exact authorization amount.</span></div>
+                    <div class="guidance-item"><span class="guidance-check">&#10003;</span><span class="guidance-text">Keep your transaction receipt for confirmation.</span></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="col-header">
+                <div class="col-icon"><span>&#127974;</span></div>
+                <div><div class="col-title">BANK TRANSFER</div><div class="col-subtitle">Direct Bank Transfers</div></div>
+            </div>
+            <div class="col-body">
+                <div class="d-row">
+                    <div class="d-icon"><span>&#128100;</span></div>
+                    <div><div class="d-label">Account Name</div><div class="d-value">Mkono Global</div></div>
+                </div>
+                <div class="d-row">
+                    <div class="d-icon"><span>&#127974;</span></div>
+                    <div><div class="d-label">Bank</div><div class="d-value-med">Equity Bank</div></div>
+                </div>
+                <div class="d-row">
+                    <div class="d-icon"><span>&#128205;</span></div>
+                    <div><div class="d-label">Branch</div><div class="d-value-med">Westlands Branch</div></div>
+                </div>
+                <div class="d-row">
+                    <div class="d-icon"><span>&#128179;</span></div>
+                    <div><div class="d-label">Account Number</div><div class="d-value-acct">0720123456789</div></div>
+                </div>
+                <div class="d-row">
+                    <div class="d-icon"><span>&#128290;</span></div>
+                    <div><div class="d-label">Bank Code</div><div class="d-value-med">6800</div></div>
+                </div>
+                <div class="d-row">
+                    <div class="d-icon"><span>&#127760;</span></div>
+                    <div><div class="d-label">Swift Code</div><div class="d-value-med">EQBLKENA</div></div>
+                </div>
+                <div class="d-row">
+                    <div class="d-icon"><span class="d-icon-text">KES</span></div>
+                    <div><div class="d-label">Currency</div><div class="d-value-med">KES</div></div>
+                </div>
+                <div class="guidance">
+                    <div class="guidance-title">Before You Send</div>
+                    <div class="guidance-item"><span class="guidance-check">&#10003;</span><span class="guidance-text">Include your Execution Reference in the payment description.</span></div>
+                    <div class="guidance-item"><span class="guidance-check">&#10003;</span><span class="guidance-text">SWIFT transfers accepted for international payments.</span></div>
+                    <div class="guidance-item"><span class="guidance-check">&#10003;</span><span class="guidance-text">Send the confirmation receipt via WhatsApp after payment.</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="next-section">
+        <div class="next-title">WHAT HAPPENS NEXT</div>
+        <div class="steps">
+            <div class="step">
+                <div class="step-num">1</div>
+                <div class="step-title">Authorize Execution</div>
+                <div class="step-sub">Complete payment using your preferred method.</div>
+            </div>
+            <div class="step">
+                <div class="step-num">2</div>
+                <div class="step-title">Payment Confirmed</div>
+                <div class="step-sub">Reply to WhatsApp with your payment confirmation.</div>
+            </div>
+            <div class="step">
+                <div class="step-num">3</div>
+                <div class="step-title">Responsibility Assumed</div>
+                <div class="step-sub">Mkono Global verifies and formally assumes responsibility.</div>
+            </div>
+            <div class="step">
+                <div class="step-num">4</div>
+                <div class="step-title">Execution Underway</div>
+                <div class="step-sub">We keep you updated throughout the process.</div>
+            </div>
+            <div class="step">
+                <div class="step-num">5</div>
+                <div class="step-title">Verified Completion</div>
+                <div class="step-sub">You receive your Execution Completion Package with evidence.</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-band">
+        <div class="footer-brand">MKONO GLOBAL</div>
+        <div class="footer-desc">Execution as a Service</div>
+        <div class="footer-tagline">WE EXECUTE &nbsp;&nbsp;·&nbsp;&nbsp; WE VERIFY &nbsp;&nbsp;·&nbsp;&nbsp; WE PROVE</div>
+    </div>
+</div>
+</body></html>

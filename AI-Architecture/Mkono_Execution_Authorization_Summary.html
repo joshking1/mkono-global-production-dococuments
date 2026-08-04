@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8">
+<style>
+@page { size: 105mm 88mm; margin: 0; }
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family: 'Jost','Helvetica Neue',sans-serif; }
+.card {
+    width: 105mm; height: 88mm;
+    background: #091e3a;
+    border: 2px solid #c8a84e;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+.top {
+    display: flex;
+    align-items: center;
+    gap: 3mm;
+    padding: 4.5mm 5mm;
+}
+.top-right {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5mm;
+}
+.top-name {
+    font-size: 12pt;
+    font-weight: 700;
+    color: white;
+    letter-spacing: 2.5pt;
+}
+.top-desc {
+    font-size: 7pt;
+    color: #c8a84e;
+    letter-spacing: 2.5pt;
+}
+.body {
+    background: #faf8f3;
+    margin: 0 3mm;
+    border-radius: 6px;
+    padding: 4mm 5mm 5mm 5mm;
+    text-align: center;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5mm;
+}
+.exec-label {
+    font-size: 6.5pt;
+    color: #c8a84e;
+    letter-spacing: 2.5pt;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.exec-num {
+    font-size: 7pt;
+    color: #999;
+    letter-spacing: 1.5pt;
+    font-weight: 500;
+    margin-top: 0.3mm;
+}
+.amount-label {
+    font-size: 8pt;
+    color: #0a2d56;
+    letter-spacing: 2pt;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-top: 3mm;
+}
+.amount {
+    margin-top: 1.5mm;
+}
+.amount-currency {
+    font-size: 20pt;
+    font-weight: 700;
+    color: #0a2d56;
+    letter-spacing: 1pt;
+    vertical-align: baseline;
+}
+.amount-number {
+    font-size: 38pt;
+    font-weight: 900;
+    color: #0a2d56;
+    letter-spacing: 1pt;
+}
+.reassure {
+    font-size: 6.5pt;
+    color: #888;
+    margin-top: 2.5mm;
+    font-style: italic;
+    line-height: 1.5;
+    max-width: 82mm;
+    margin-left: auto;
+    margin-right: auto;
+}
+.bottom {
+    background: #c8a84e;
+    padding: 2.5mm 4mm;
+    text-align: center;
+}
+.bottom-text {
+    font-size: 7.5pt;
+    color: #0a2d56;
+    letter-spacing: 1.5pt;
+    font-weight: 600;
+}
+</style></head><body>
+<div class="card">
+    <div class="top">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="34" height="34">
+            <circle cx="100" cy="100" r="96" fill="#0a2d56" stroke="#c8a84e" stroke-width="6"/>
+            <ellipse cx="100" cy="100" rx="40" ry="92" fill="none" stroke="#c8a84e" stroke-width="2.5" opacity="0.6"/>
+            <ellipse cx="100" cy="100" rx="70" ry="92" fill="none" stroke="#c8a84e" stroke-width="2.5" opacity="0.4"/>
+            <line x1="8" y1="100" x2="192" y2="100" stroke="#c8a84e" stroke-width="2.5" opacity="0.5"/>
+            <line x1="100" y1="8" x2="100" y2="192" stroke="#c8a84e" stroke-width="2.5" opacity="0.5"/>
+            <text x="100" y="112" text-anchor="middle" font-family="Georgia,serif" font-size="30" font-weight="bold" fill="#c8a84e">MG</text>
+        </svg>
+        <div class="top-right">
+            <div class="top-name">MKONO GLOBAL</div>
+            <div class="top-desc">Execution as a Service</div>
+        </div>
+    </div>
+    <div class="body">
+        <div class="exec-label">Execution Request</div>
+        <div class="exec-num">#MKG-2026-XXXX</div>
+        <div class="amount-label">Execution Authorization Amount</div>
+        <div class="amount">
+            <span class="amount-currency">KES </span><span class="amount-number">XX,XXX</span>
+        </div>
+        <div class="reassure">Upon authorization, Mkono Global immediately assumes responsibility for coordinating your execution from start to verified completion.</div>
+    </div>
+    <div class="bottom">
+        <div class="bottom-text">PROCEED TO PAYMENT OPTIONS &#8594;</div>
+    </div>
+</div>
+</body></html>
